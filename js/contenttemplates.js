@@ -3,114 +3,96 @@
 function generatecontent(template, projinfoArrayjs){
  //Template[0]=category,template[1]=seesawoption,template[2]=timeclass
  
-   
-    var projContentID = document.getElementById('project-content'),
-    container = document.createElement('container'),
-    header1 = document.createElement('div');
-    container.appendChild(header1);
-    header1.setAttribute('class',"section_header");
-    projContentID.appendChild(container);
-    $("#project-content").slideDown("slow"); 
+    var projContentID = $('#project-content'),
+    container = $('<container>'),
+    header1 = $('<h3>'),
+    topicsimg = $('#topicsimg');
+    header1.addClass('section_header');
+    container.appendTo(projContentID),
+    header1.appendTo(container),
+    projContentID.slideDown("slow"); 
+    console.log(projinfoArrayjs);
     if(template[0] == "life"){
        
-        var dbArray = new Array("posthead","datesequence","picture","description", "media");
-        
-        if(template[1]=="music"){
-            $('#Logo').attr("src","/img/Logoguitar.png");
-            $('#topicsimg').attr("src","/img/topiclogos-music.png");
-            header1.innerHTML = '<h3>Music contained in this section is all original composition using computer, guitar and keyboard.  Enjoy!</h3>';
-           
+        var dbArray = new Array("posthead","datesequence","picture","description", "media"),
+        headers = new Array();
+        headers[0]= new Array('technology','/img/Logo.png', '/img/topiclogos-design.png','The things I Create, Design and Engineer.');
+        headers[1] = new Array('music','/img/Logoguitar.png','/img/topiclogos-music.png', 'Music contained in this section is all original composition using computer, guitar and keyboard.  Enjoy!');
+        headers[2] = new Array('activities','/img/Logo.png', '/img/topiclogos-activities.png', 'The organizations and activities where I am involved.');
+        headers[3]= new Array('inspiration','/img/Logo.png','/img/topiclogos-inspirations.png', 'All the people/projects/things that are interesting, creative, inspiring.');
+        //Populates the template headers for each category
+    
+            for(var j=0;j<headers[0].length;j++){
+              
+                if(headers[j][0]==template[1]){
+                    $('#Logo').attr('src', headers[j][1]);
+                    topicsimg.attr('src', headers[j][2]);
+                    header1.text(headers[j][3]);
+                    popRows(projinfoArrayjs);
+                    
+                }
+                
+            }
         }
-        if(template[1]=="technology"){
-            
-            $('#topicsimg').attr("src","/img/topiclogos-design.png"); 
-            header1.innerHTML = '<h3>The things I Create, Design and Engineer</h3>';
-        }
-         if(template[1]=="activities"){
-            
-            $('#topicsimg').attr("src","/img/topiclogos-activities.png"); 
-            header1.innerHTML = '<h3>The organizations and activities where I am involved'
-        }
-        
-         if(template[1]=="inspiration"){
-           
-            $('#topicsimg').attr("src","/img/topiclogos-inspirations.png"); 
-            header1.innerHTML = '<h3>All the people/projects/things that are interesting, creative, inspiring.</h3>';
-        }
-
-        popRows();
-    }
     
 
     if(template[0] == "work"){
-        header1.innerHTML = '<h3>Things I do to make a living.</h3>';
+        header1.text('Things I do to make a living.');
         
         if(template[2]=="future")
         {
             var dbArray = new Array("posthead", "picture","description", "media");
-            popRows();
+            popRows(projinfoArrayjs);
         }
 
         else{
-        var dbArray = new Array("worklogo","companyname","position","role","timeframe");
-        var titleArray = new Array("Logo","Company","Position","Role","Timeframe");
+        var dbArray = new Array("worklogo","companyname","position","role","timeframe"),
+        titleArray = new Array("Logo","Company","Position","Role","Timeframe"),
         //Row container
-       
-        var titlecontainer = document.createElement('container');
-        titlecontainer.className = 'titleRow';
-        titlecontainer.innerHTML = '';
-        container.appendChild(titlecontainer);
+        titlecontainer = $('<container>');
+        col=[];
+        titlecontainer.addClass('titleRow');
+        titlecontainer.text('');
+        titlecontainer.appendTo(container);
      
-        var col=[];
+        
         for(i=0;i<titleArray.length;i++){
-            col[i] = document.createElement(dbArray[i]);
-            col[i].className = "colw"+i;
+            col[i] = $('<'+dbArray[i]+'>');
+            col[i].addClass('colw'+i);
             //Table Row Content	
-            titlecontainer.appendChild(col[i]);
-            x=document.getElementById("project-content").getElementsByTagName(dbArray[i]);
-            x[0].innerHTML=titleArray[i];
+            col[i].appendTo(titlecontainer).html(titleArray[i]);
         }
         
         for(j=0;j<(projinfoArrayjs.length);j++)
         {
-            containerRow = document.createElement('container');
-            containerRow.className = 'newRow';
-            containerRow.innerHTML = '';
-            projContentID.appendChild(containerRow);
-            
+            containerRow = $('<container>').addClass('newRow').text('').appendTo(projContentID);
             for(i=0;i<dbArray.length;i++){
-                col[i] = document.createElement(dbArray[i]);
-                col[i].className = "colw"+i;
-                containerRow.appendChild(col[i]);
-                //Table Row Content	
-               
-               x=document.getElementById("project-content").getElementsByTagName(dbArray[i]);
-               x[j+1].innerHTML=projinfoArrayjs[j][dbArray[i]];
+                col[i] = $('<'+dbArray[i]+'>').addClass('colw'+i).appendTo(containerRow)
+                .html(projinfoArrayjs[j][dbArray[i]]);
             }
         }
     }
 }
 
-function popRows(){
-
+function popRows(projinfoArrayjs){
+    
+      
        //Row container for all website entries
-        for(j=0;j<(projinfoArrayjs.length);j++)
-        {
-            container = document.createElement('container');
-            container.className = 'newRow';
-            container.innerHTML = '';
-            projContentID.appendChild(container);
-            var lineitem=[];
-            for(i=0;i<dbArray.length;i++){
-                lineitem[i] = document.createElement(dbArray[i]);
-                container.appendChild(lineitem[i]);
-                //Table Row Content 
-               var x=document.getElementById("project-content").getElementsByTagName(dbArray[i]);
-               x[j].innerHTML=projinfoArrayjs[j][dbArray[i]]+"<br />";    
+        
+        for(var j=0;j<projinfoArrayjs.length;j++){
+            
+            var container = $('<container>'),
+            lineitem=[],
+            x;
+            container.addClass('newRow').text("").appendTo(projContentID);
+           for(var i=0;i<dbArray.length;i++){
+                lineitem[i] = $('<'+dbArray[i]+'>').appendTo(container)
+                    .html(projinfoArrayjs[j][dbArray[i]]+'<br />');  
             }
         }
 
 };
 
 
-}
+};
+
