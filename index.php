@@ -13,7 +13,6 @@
     </style>
 </head>
 <body>
-    Testing Testing Testing
     <div class="container-fluid">
         <br />  <br />  
         <div class='row-fluid'>
@@ -29,8 +28,8 @@
                 <br />
 
 
-                <img id='short' class='center inline-block' src='/img/shortStory.png'/>
-                <img id='long' class='center inline-block' src='/img/longStory.png'/>
+                <img id='short' title="Short Story Button" class='center inline-block' src='/img/shortStory.png'/>
+                <img id='long' title="Long Story Button" class='center inline-block' src='/img/longStory.png'/>
 
                 <form name="menuform" method="get" action="nav.php">    
                     <input type="hidden" name="timeclassoption"/>
@@ -64,7 +63,10 @@
                         I studied Mechanical Engineering at the University of Michigan and subsequently performed work in both strategy and execution based consulting roles. Much of this work was focused on Product Lifecycle Management and Supply Chain Management.
                         <br /><br />
                         Fast forward to today and I am an aspiring programmer/software developer with a range of interests spanning interactive media (think Kinect meets sensors meets music meets complete sensory overload), web design, and software development.</p>
-
+                        <div>
+                            <a href='http://www.github.com/dstile/' title='github link'><img class='icon center' src='/img/github-icon.png'/></a>
+                            <a href='http://www.twitter.com/David_Stile/' title='twitter link'><img class='icon center' src='/img/twitter-icon.png'/></a>
+                        </div>
                         <h2 class='center'>About this Website</h2>
 
                         <p>This website was one of my first personal coding projects.  I made it a point to develop it from scratch.  No Drupal, and no Wordpress. I am not opposed to them but I really just wanted to learn what goes on behind the scenes as much as possible.  It was developed using:</p> 
@@ -100,19 +102,20 @@
         <script>  
 
         var timeclass;
-        (function($) {
+        (function($){
             var timeoption = ['past', 'present', 'future'],
             currentTime = new Date().getDate(),
-            background = $('#background');
+            background = $('#background'),
+            timeframe = $('#timeframe');
 
-        //Changes background every other day
-        if(currentTime%2==0) {
-            background.attr('src', 'img/background.png');
-        } else{
-            background.attr('src', 'img/background3.png');
-        }
+            //Changes background every other day
+            if(currentTime%2==0) {
+                background.attr('src', 'img/background.png');
+            }else{
+                background.attr('src', 'img/background3.png');
+            }
              //Listen to each timeframe button for when they are clicked
-             var timeframe = $('#timeframe');
+            
              $("#timeframemap area").each(function(i) {
                 var ind = i;     
                 $("map #"+timeoption[ind]).on('click', function(){
@@ -123,49 +126,109 @@
             });
 
 
-
+             //This section manages the flow of what is shown vs. hidden on the main index
              var $longstoryButton = $('#long'),
              $shortstoryButton = $('#short'),
              $longstory=$('div #longstory'),
              $shortstory=$('div #shortstory'),
-             $mottoimg=$('div #motto');
-             
-             $shortstory.hide();
-             $longstory.hide();
-             $shortstoryButton.on('click', function(){
-              $this= $(this);
-              $this.attr('src','/img/shortStory_clicked.png');
-              $longstoryButton.attr('src','/img/longStory.png');
+             $mottoimg=$('div #motto'),
+             /*Status 1=none clicked, Status 2=shortStory clicked, Status 3=longStory clicked*/
+             status_short=1,
+             status_long=1,
+             status_main=1;             
+            
+             //This function checks to see if the number passed in is odd/even
+            var isEven = function(someNumber){
+                return (someNumber%2 == 0) ? true : false;
+            };
+
+            $shortstory.hide();
+            $longstory.hide();
+
+            $shortstoryButton.on('mouseenter', function(){
+                $(this).attr('src', '/img/shortStory_mouseover.png');
+            });
+
+            $shortstoryButton.on('mouseleave', function(){
+                $this=$(this);
+                if(isEven(status_short)){
+                    $this.attr('src','/img/shortStory_clicked.png' );
+                }else{
+                    if(status_main>1){
+                        $this.attr('src','/img/shortStory_storyselect.png');
+                    }else{
+                        $this.attr('src','/img/shortStory.png');
+                    }
+                }
+            });
+
+            $longstoryButton.on('mouseenter', function(){
+                $(this).attr('src', '/img/longStory_mouseover.png');
+            });
+
+
+            $longstoryButton.on('mouseleave', function(){
+                $this=$(this);
+                if(isEven(status_long)){
+                    $this.attr('src','/img/longStory_clicked.png' );
+                }else{
+                    if(status_main>1){
+                        $this.attr('src','/img/longStory_storyselect.png');
+                    }else{
+                        $this.attr('src','/img/longStory.png');
+                    }
+                }
+            });
+
+
+            $shortstoryButton.on('click', function(){
+               status_short += 1;
+               status_main +=1;
+               status_long=1;
+               $this= $(this);
+               $this.attr('src','/img/shortStory_clicked.png');
+               if(status_main>1){
+                $longstoryButton.attr('src','/img/longStory_storyselect.png');
+               }else {
+                $longstoryButton.attr('src','/img/longStory.png');
+               }
                $mottoimg.hide();
                $shortstory.animate({opacity: 'toggle'},500, function(){
-                   if($longstory.is(':hidden')==false){
-                       $longstory.fadeOut();
-                   }
-                   checkmotto();
-               });
-           });
-
-             $longstoryButton.on('click', function(){
-                $this= $(this);
-                $this.attr('src','/img/longStory_clicked.png');
-                $shortstoryButton.attr('src','/img/shortStory.png');
-                $mottoimg.hide();
-                $longstory.animate({opacity: 'toggle'},500,function(){
-                 if($shortstory.is(':hidden')==false){
-                    $shortstory.fadeOut();
+                if($longstory.is(':hidden')==false){
+                    $longstory.fadeOut();
                 }
                 checkmotto();
             });
+           });
+
+            $longstoryButton.on('click', function(){
+                status_long += 1;
+                status_main +=1;
+                status_short=1;
+                $this= $(this);
+                $this.attr('src','/img/longStory_clicked.png');
+                if(status_main>1){
+                    $shortstoryButton.attr('src','/img/shortStory_storyselect.png');
+                }else {
+                    $shortstoryButton.attr('src','/img/shortStory.png');
+                }
+                $mottoimg.hide();
+                $longstory.animate({opacity: 'toggle'},500,function(){
+                    if($shortstory.is(':hidden')==false){
+                        $shortstory.fadeOut();
+                    }
+                    checkmotto();
+                });
             });
 
 
-             $(".content").mCustomScrollbar({
+            $(".content").mCustomScrollbar({
                 scrollButtons:{
                     enable:true
                 }
             });
 
-             function worklife(){
+            function worklife(){
                 if($("#wrapper").is(":hidden")) 
                 {
                     $("#wrapper").slideDown("slow");
@@ -178,13 +241,12 @@
                     $mottoimg.fadeIn(500);
                     $shortstoryButton.attr('src','/img/shortStory.png')
                     $longstoryButton.attr('src','/img/longStory.png')
+                    status_main=1;
                 }
                 if($longstory.is(':hidden')==false || $shortstory.is(':hidden')==false){
                     $mottoimg.fadeOut(500);
                 }
             };
-
-
         })(jQuery);
 
         function getmenuoptions(seesawoption){
