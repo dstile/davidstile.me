@@ -15,6 +15,7 @@
 <body>
     <div class="container-fluid">
         <br />  <br />  
+        Test Test
         <div class='row-fluid'>
             <div class='offset2 span10'>
                 <div id="namelogo" class="row-fluid"> 
