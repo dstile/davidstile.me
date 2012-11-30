@@ -13,6 +13,8 @@
     </style>
 </head>
 <body>
+    <img id="background" class="bg" alt=""/>
+    
     <div class="container-fluid">
         <br />  <br />  
         <div class='row-fluid'>
@@ -85,9 +87,6 @@
             </div>
         </div>
         <!--if javascript is not enabled default background loads-->
-        <img id="background" class="bg" alt=""/>
-        <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript> 
-
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
         <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))</script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
@@ -98,7 +97,7 @@
         <script src="js/jquery.mCustomScrollbar.js"></script> 
         <script src="processing-1.4.1.js"></script>
         <script src="js/jquery.js"></script>
-
+        <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript>
         <script>  
 
         var timeclass;

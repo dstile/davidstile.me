@@ -119,27 +119,6 @@ max-height: 140px;
 
         top: 0px;
  }
- 
-img.bg {
-	/* Set rules to fill background */
-	
-        
-min-height: 105%;
-	min-width: 1024px;
-	
-	/* Set up proportionate scaling */
-	width: 106%;
-	height: auto;
-	
-	/* Set up positioning */
-	position: fixed;
-        top: -5%;
-        left: -6%;
-        z-index: -2;
-}
-
-
-
  #transparent_map {
   position: absolute;
   z-index: 30;
