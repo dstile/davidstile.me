@@ -13,6 +13,7 @@
     </style>
 </head>
 <body>
+    <img id="background" class="bg" alt=""/>
     <div class="container-fluid">
         <br />  <br />  
         <div class='row-fluid'>
@@ -85,7 +86,7 @@
             </div>
         </div>
         <!--if javascript is not enabled default background loads-->
-        <img id="background" class="bg" alt=""/>
+        
         <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript> 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
