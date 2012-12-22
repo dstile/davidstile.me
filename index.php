@@ -100,7 +100,9 @@
         <script src="js/jquery.mCustomScrollbar.js"></script> 
         <script src="processing-1.4.1.js"></script>
         <script src="js/jquery.js"></script>
+        
         <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript>
+        
         <script>  
 
         var timeclass;
