@@ -100,7 +100,9 @@
         <script src="js/jquery.mCustomScrollbar.js"></script> 
         <script src="processing-1.4.1.js"></script>
         <script src="js/jquery.js"></script>
-        
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
         <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript>
         
         <script>  
