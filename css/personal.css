@@ -77,8 +77,33 @@ p {
     
 h3{
     font-family: 'Scada', sans-serif;
-    font-size: 16px;
+    font-size: 1.5em;
 } 
+/*Introduction section formatting*/
+.intro {
+    color: #000000;
+    font-size: 1.5em;   
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+p.intro {
+    color: #000000;
+    font-size: 1.5em;   
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-left: auto;   
+    margin-right: auto;
+}
+
+ul.introlist {
+    font-size: 1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    margin-left: auto;   
+    margin-right: auto;
+}
 
 .transbackground{
      background-image: url('content.png');
@@ -312,16 +337,11 @@ position: absolute;
      position: relative;
      
  }
- 
 
+/*CSS for the main content window */
+ .contentIndex{width: 80%; height:300px; padding:10px; overflow:auto; }
+ .contentNav{width: 80%; height:400px; padding:10px; overflow:auto; }
 
-    .content{width: 80%; height:300px; padding:10px; overflow:auto; }
-    .content p:nth-child(even){}
-    .content p:nth-child(3n+0){}
-
- 
- 
- 
 .center {   margin-left: auto;   margin-right: auto; }
 
 .centered-text {

@@ -77,7 +77,7 @@ if (($_GET['category'] == "")) {
 
 
 		<div class="row-fluid">
-			<div id="project-content" class="hidden offset1 span10 transbackground content rounded">	
+			<div id="project-content" class="hidden offset1 span10 transbackground contentNav rounded">	
 
 				<!--Template used when Life is selected-->
 				<script id="header-template" type="text/x-handlebars-template">
@@ -253,7 +253,7 @@ function getmenuoptions(category, timeclass, seesawoption) {
 
 
 //This is a plugin that pulls in the window with the scroll bar for content
-$(".content").mCustomScrollbar({
+$(".contentNav").mCustomScrollbar({
 	scrollButtons:{
 		enable:true
 	}

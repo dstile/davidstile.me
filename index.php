@@ -11,6 +11,11 @@
     <style type="text/css">
     canvas {width: 75%;}
     </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script>!window.jQuery.ui && document.write(unescape('%3Cscript src="js/jquery/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))</script>
+    <script src="js/jquery.js"></script>
 </head>
 <body>
     <img id="background" class="bg" alt=""/>
@@ -55,11 +60,15 @@
                         </div>  
                     </div>
                 </section>
+                <script type="text/javascript">
+                var $longstory=$('div #longstory');
+                $longstory.hide();
+                </script>
 
-                <section id='shortstory' class='transbackground rounded content center'>
+                <section id='shortstory' class='transbackground rounded contentIndex center'>
                     <u><i><h1>The Short Story</h1></i></u>
                     <h2 class='center'>About Me</h2>
-                    <p>I am a technology enthusiast with a passion for developing and creating unique products.  My ultimate goal is for end users to find true enjoyment and/or utility from my works. My past background and work is diverse and broad in scope. 
+                    <p class='intro'>I am a technology enthusiast with a passion for developing and creating unique products.  My ultimate goal is for end users to find true enjoyment and/or utility from my works. My past background and work is diverse and broad in scope. 
                         <br />
                         <br />
                         I studied Mechanical Engineering at the University of Michigan and subsequently performed work in both strategy and execution based consulting roles. Much of this work was focused on Product Lifecycle Management and Supply Chain Management.
@@ -71,7 +80,8 @@
                         </div>
                         <h2 class='center'>About this Website</h2>
 
-                        <p>This website was one of my first personal coding projects.  I made it a point to develop it from scratch.  No Drupal, and no Wordpress. I am not opposed to them but I really just wanted to learn what goes on behind the scenes as much as possible.  It was developed using:</p> 
+                        <p class='intro'>This website was one of my first personal coding projects.  I made it a point to develop it from scratch.  No Drupal, and no Wordpress. I am not opposed to them but I really just wanted to learn what goes on behind the scenes as much as possible.  It was developed using:</p> 
+                        <div class = 'intro'>
                         <ul>
                             <li>Javascript (with plenty of jQuery help)</li>
                             <li>PHP</li>
@@ -80,26 +90,25 @@
                             <li>Processing.js(the animated work/life balance seesaw)</li>
                             <li>javascript plugin developed by Brandon Aaron for my scrolling content window.</li>
                         </ul>
-
-                        <p>This site will always be a work in progress.  My latest updates have been integrating Handlebars.js for templating, using more OOO programming to clean up the coding structure for improved modularity, as well as building in more ajax to reduce number of full page refreshes required.</p>
-                    </section>
+                    </div>
+                        <p class='intro'>This site will always be a work in progress.  My latest updates have been integrating Handlebars.js for templating, using more OOO programming to clean up the coding structure for improved modularity, as well as building in more ajax to reduce number of full page refreshes required.</p>
+                </section>
+                <script type="text/javascript">
+                var $shortstory=$('div #shortstory');
+                $shortstory.hide();
+                </script>
                 </div>
             </div>
         </div>
         <!--if javascript is not enabled default background loads-->
         
         <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript> 
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-        <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))</script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-        <script>!window.jQuery.ui && document.write(unescape('%3Cscript src="js/jquery/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))</script>
         <!-- mousewheel plugin -->
         <script src="js/jquery.mousewheel.min.js"></script>
         <!-- custom scrollbars plugin -->
         <script src="js/jquery.mCustomScrollbar.js"></script> 
         <script src="processing-1.4.1.js"></script>
-        <script src="js/jquery.js"></script>
+      
 
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
@@ -135,8 +144,6 @@
              //This section manages the flow of what is shown vs. hidden on the main index
              var $longstoryButton = $('#long'),
              $shortstoryButton = $('#short'),
-             $longstory=$('div #longstory'),
-             $shortstory=$('div #shortstory'),
              $mottoimg=$('div #motto'),
              /*Status 1=none clicked, Status 2=shortStory clicked, Status 3=longStory clicked*/
              status_short=1,
@@ -148,8 +155,7 @@
                 return (someNumber%2 == 0) ? true : false;
             };
 
-            $shortstory.hide();
-            $longstory.hide();
+            
 
             $shortstoryButton.on('mouseenter', function(){
                 $(this).attr('src', '/img/shortStory_mouseover.png');
@@ -228,7 +234,7 @@
             });
 
 
-            $(".content").mCustomScrollbar({
+            $(".contentIndex").mCustomScrollbar({
                 scrollButtons:{
                     enable:true
                 }
