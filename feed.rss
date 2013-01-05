@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Latest & Greatest from David Stile</title>
+<title>Latest and Greatest from David Stile</title>
 <link>http://www.davidstile.me/rss</link>
 <description>Interesting tidbits and findings from my daily endeavors</description>
 <atom:link href="http://www.davidstile.me/rss" rel="self" type="application/rss+xml" />
