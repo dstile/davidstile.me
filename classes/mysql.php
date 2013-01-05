@@ -1,9 +1,16 @@
 <?php
 
-define('DB_SERVER', "mysql.mrdavidstile.com");
+//Define constants here
+
+define('DB_SERVER', "localhost");
+define('DB_USER', "root");
+define('DB_PASSWORD', "Flight1");
+define('DB_NAME', "SimpleMember");
+
+/*define('DB_SERVER', "mysql.mrdavidstile.com");
 define('DB_USER', "davestile");
 define('DB_PASSWORD', "Cre8tedAm0nster");
-define('DB_NAME', "stilelog_sitecontent");
+define('DB_NAME', "stilelog_sitecontent");*/
 
 class Mysql {
 
