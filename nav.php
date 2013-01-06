@@ -73,7 +73,7 @@ if (($_GET['category'] == "")) {
 			<script id="header-template" type="text/x-handlebars-template">
 			<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
 			</script>
-			<a type="application/rss+xml" href="rss/feed.rss"><img class='rss' src= "img/rss.png"/></a>
+			<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rss' src= "img/rss.png"/></a>
 			<script id="lifepost-template" type="text/x-handlebars-template">
 			{{#each this}}
 			<container class= "newRow">
