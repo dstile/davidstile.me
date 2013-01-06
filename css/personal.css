@@ -37,6 +37,11 @@
     border-radius: 15px;
 }
 
+.rss {
+    float: right;
+    padding: 10px;
+}
+
 div {
     text-align: center;
 }

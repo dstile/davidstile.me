@@ -12,6 +12,21 @@
 <pubDate>Sat, 05 Jan 2013 03:38:10 -0800</pubDate>
 <guid isPermaLink="true">http://davidstile.me/nav.php?timeclassoption=present&amp;seesawoption=life&amp;category=activities</guid>
 <description>Reflections on my time at GEW Japan</description>
+<content:encoded><![CDATA[<container class="newRow">
+			<posthead>GEW Japan</posthead>
+			<datesequence>2012-12-17</datesequence>
+			<picture><img src="/img/startup_tokyo.jpg" height="300px" width="400px" class="center"></picture>
+			<description>I had a great time attending GEW Japan back in November.  I put together an article that was featured on the <a href="http://impactjapan.org/">Impact Japan website</a>.  Please go and check it out.</description>
+			<media><a href="http://impactjapan.org/2012/12/14/gew-japan-an-outsiders-perspective/">My GEW Article</a></media>
+			</container>	
+			
+			<container class="newRow">
+			<posthead>Signal to Noise Media Labs</posthead>
+			<datesequence>2012-10-02</datesequence>
+			<picture><a href="http://signaltonoiselabs.org/"><img src="/img/s2n.png" width="100px" height="50px" class="center"></a></picture>
+			<description>I started working with Signal to Noise (S2N) this past year.  My focus is on interactive media using technologies like Max MSP and sensors (i.e. Arduinos).<br><br>Signal-to-Noise Audio Labs is an interdisciplinary research and design collective that makes cool audio stuff. Modeled after the MIT Media Lab and CNMAT at UC Berkeley, we’re a group of scientists, artists, and highly-motivated folks that come together to research, design, perform with, and teach innovative media technologies. Some of the disciplines draw from: <ul> <li>Physics</li> <li>Music</li> <li>Acoustics</li> <li>Psychoacoustics</li> <li>Electrical &amp; Mechanical Engineering</li> <li>Cognitive Sciences</li> <li>Biology</li> <li>Architecture</li> <li>Electroacoustics</li> <li>Computer sciences</li> <li>Mathematics</li> <li>Industrial Design</li> </ul></description>
+			
+			</container>	]></content:encoded>
 </item>
 
 </channel>
