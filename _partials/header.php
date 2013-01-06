@@ -4,6 +4,8 @@
     <title>David Stile</title>
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <link rel="alternate" type="application/rss+xml" 
+   href="rss/feed.rss" title="RSS feed for DavidStile.me">
     <link href="css/personal.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css"/>
