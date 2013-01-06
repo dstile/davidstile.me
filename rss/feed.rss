@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Latest  " &amp; " Greatest from David Stile</title>
-<link>http://www.davidstile.me/rss/feed.rss</link>
+<title>David Stile</title>
+<link>http://davidstile.me/nav.php?timeclassoption=future&amp;seesawoption=life&amp;category=activities</link>
 <description>Interesting tidbits and findings from my daily endeavors</description>
 <atom:link href="http://www.davidstile.me/rss/feed.rss" rel="self" type="application/rss+xml" />
 
 <item>
 <title>GEW Tokyo</title>
-<link>http://www.davidstile.me/nav.php</link>
+<link>http://davidstile.me/nav.php?timeclassoption=present&amp;seesawoption=life&amp;category=activities</link>
 <pubDate>Sat, 05 Jan 2013 03:38:10 -0800</pubDate>
-<guid isPermaLink="true">http://www.davidstile.me/nav.php</guid>
+<guid isPermaLink="true">http://davidstile.me/nav.php?timeclassoption=present&amp;seesawoption=life&amp;category=activities</guid>
 <description>Reflections on my time at GEW Japan</description>
 </item>
 
