@@ -1,4 +1,4 @@
-	<script id="header-template" type="text/x-handlebars-template">
+<script id="header-template" type="text/x-handlebars-template">
 			<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
 			</script>
 <div id='content-stream' class = 'center'>

@@ -107,7 +107,7 @@ var Recentposts = {
 					//queried information that was returned
 					this.data = config.data;
 					//section header information
-					this.header = config.header.headerText;
+					this.header = config.header;
 					//This needs to contain ajax calls to db for any new selections that occur???
 					this.fetch();
 				},
@@ -125,7 +125,7 @@ var Recentposts = {
 				//$.ajax(dBinfo, function(data){//The data is what gets returned as the object from the dataBase
 					//use $.map to sort through all results returned and only pull out what we need
 					self.recentHeader = {
-						sectionHeader: self.header
+						sectionHeader: self.header.headerText
 					};
 					self.recentData = $.map(this.data, function(instance) {//the callback pulls in each sub 
 						//object within data.results.  I named this instance to make it easier to see
@@ -134,7 +134,7 @@ var Recentposts = {
 							posthead: instance.posthead,
 							datesequence: instance.datesequence,
 							picture: instance.picture,
-							description: instance.description,
+							article: instance.description,
 							media: instance.media
 						};
 					});
