@@ -69,10 +69,11 @@ if (($_GET['category'] == "")) {
 	<div class="row-fluid">
 		<div id="project-content" class="hidden offset1 span10 transbackground contentNav rounded">	
 
-			<!--Template used when Life is selected-->
+			
 			<script id="header-template" type="text/x-handlebars-template">
 			<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
 			</script>
+			<!--Template used when Life is selected-->
 			<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rss' src= "img/rss.png"/></a>
 			<script id="lifepost-template" type="text/x-handlebars-template">
 			{{#each this}}
@@ -119,7 +120,8 @@ if (($_GET['category'] == "")) {
 <script src="js/hoverlinks.js"></script>
 <script src="processing-1.4.1.js"></script> 
 <script src="js/handlebars-1.0.rc.1.js"></script> 
-<script src="js/postTemplates.js"></script>
+
+<!--Twitter API Library -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script>
 

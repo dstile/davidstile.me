@@ -6,7 +6,9 @@
         Purpose of the stylesheet follows.
 */
 
-
+body { 
+    overflow: hidden;
+    }
  a { 
     position: relative;
     margin: 0;
@@ -37,17 +39,72 @@
     border-radius: 15px;
 }
 
+bottomTab {
+    display: block;
+    border: 1px solid  #222220;
+    border-bottom: none;
+    line-height: 2em;
+    border-top-right-radius: 1em;
+    -moz-border-radius-topright: 1em;
+    -webkit-border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    -moz-border-radius-topleft: 1em;
+    -webkit-border-top-left-radius: 1em;
+    width: 40%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    background-color: #ababa0;
+}
+
+bottomTab:hover {
+    background-color: white;
+}
+.recent_container {
+ position: absolute;
+top: 2em ;
+ background-color: white;
+ opacity:0.7;
+ width: 100%;
+ border: solid 1px black;
+}
+
+#content-stream {
+    
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 90%;
+}
+
+.copyright {
+
+    
+    height: 100%;
+    line-height: 2em;
+}
+
+.copyright p{
+    position: fixed;
+    bottom: 0;
+    left: 1em;
+}
+
+
 .rss {
     float: right;
     padding: 5px;
     display: block;
 }
 
+footer { 
+bottom: 0px;
+left: 0px;
+position: absolute;
+width:100%;
+height: 2em;
+}
+
 div {
     text-align: center;
-}
-area, param {
-
 }
 
 posthead {
@@ -116,17 +173,14 @@ ul.introlist {
 
  }
  .container-fluid{
-
 	/* Set up positioning */
-
         top: 0px;
  }
  
 img.bg {
 	/* Set rules to fill background */
 	
-        
-        min-height: 105%;
+    min-height: 105%;
 	min-width: 1024px;
 	
 	/* Set up proportionate scaling */

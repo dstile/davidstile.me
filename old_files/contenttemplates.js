@@ -12,6 +12,9 @@ function generatecontent(template, projinfoArrayjs){
     header1.appendTo(container),
     projContentID.slideDown("slow"); 
     console.log(projinfoArrayjs);
+    
+
+    //when life is the template Javascript gets generatedfor this template
     if(template[0] == "life"){
        
         var dbArray = new Array("posthead","datesequence","picture","description", "media"),
