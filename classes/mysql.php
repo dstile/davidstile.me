@@ -2,15 +2,15 @@
 
 //Define constants here
 
-/*define('DB_SERVER', "localhost");
+define('DB_SERVER', "localhost");
 define('DB_USER', "root");
 define('DB_PASSWORD', "Flight1");
-define('DB_NAME', "SimpleMember");*/
+define('DB_NAME', "SimpleMember");
 
-define('DB_SERVER', "mysql.mrdavidstile.com");
+/*define('DB_SERVER', "mysql.mrdavidstile.com");
 define('DB_USER', "davestile");
 define('DB_PASSWORD', "Cre8tedAm0nster");
-define('DB_NAME', "stilelog_sitecontent");
+define('DB_NAME', "stilelog_sitecontent");*/
 
 class Mysql {
 
@@ -48,7 +48,7 @@ class Mysql {
         /* Preparing selection statement */
 
         $relprojects = array();
-        $query = "SELECT * FROM posts WHERE seesawoption='" . $seesawoption . "'ORDER BY datesequence DESC";
+        $query = "SELECT * FROM posts WHERE seesawoption='" . $seesawoption . "'ORDER BY datesequence DESC LIMIT 5  ";
 
         if ($result = $this->conn->query($query)) {
 

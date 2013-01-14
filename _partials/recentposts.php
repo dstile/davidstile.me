@@ -28,7 +28,7 @@
 
             var header= [
             {
-                headerText: 'Most recent Posts.'
+                headerText: 'Most Recent Posts.'
             }];
 
             Recentposts.init({

@@ -5,9 +5,11 @@ require_once 'classes/contentgenerator.php';
 <img id="background" class="bg" alt=""/>
 
 <div class="container-fluid">
-    <br />  <br />  
-    <div class='row-fluid'>
-        <div class='offset2 span10'>
+    <div id = 'corewrap'>
+        <br />  <br />  
+        <div class='row-fluid'>
+            <div class='offset2 span10'>
+
             <div id="namelogo" class="row-fluid"> 
                 <a href="index.php">
                     <img id="Logo"  class="maxdim center" src="/img/Logo.png" width="100%" alt="Name Logo"/>
@@ -84,6 +86,24 @@ require_once 'classes/contentgenerator.php';
             </div>
         </div>
     </div>
+        <!--Bottom Tab dynamic content-->
+        <div class = 'row-fluid tabContent'>
+            <div class ='offset2 span10 row'>
+                <bottomTab class='center'>
+                    Latest & Greatest
+                </bottomTab>
+            </div>
+
+            <div class = 'offset2 span9 recentContainer row'>                 
+                <?php include '_partials/recentposts.php' ?>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
     <?php include '_partials/footer.php' ?>
     <!--if javascript is not enabled default background loads-->
 
@@ -103,24 +123,16 @@ require_once 'classes/contentgenerator.php';
             //Main Navigation page slider
 
             //save container that holds all information about recent posts
-            var recentContainer = $('.recent_container');
+            var tabHeight = $(window).height() - $('bottomTab').height(),
+            recentContainer = $('div.recent_container');
+        
+
+            $('div#corewrap').css('height', tabHeight);
             //if bottom tab is clicked => hide all current information, change the background
             //AND show most recent blog posts
-            $('footer bottomTab').on('click', function() {  
+            $('bottomTab').on('click', function() {  
                 $('body').css('overflow', 'visible');
-                $('div.container-fluid').animate({'height': '0px'}, 5000,
-                    function() {
-                       $('div.container-fluid').css('display', 'none')
-                   });
-
-                $('footer').toggle(
-                    function() {
-                        $('footer').animate({'height': '95%'}, 5000);
-                    },
-                    function(){
-                        $('footer').animate({'height': '2em'}, 5000);
-                    }
-                    );
+                $('#corewrap').slideToggle(2000);
                 $('img#background.bg').attr('src', 'img/background1.png');
             });
 
@@ -201,12 +213,12 @@ require_once 'classes/contentgenerator.php';
 
 
             $shortstoryButton.on('click', function(){
-             status_short += 1;
-             status_main +=1;
-             status_long=1;
-             $this= $(this);
-             $this.attr('src','/img/shortStory_clicked.png');
-             if(status_main>1){
+               status_short += 1;
+               status_main +=1;
+               status_long=1;
+               $this= $(this);
+               $this.attr('src','/img/shortStory_clicked.png');
+               if(status_main>1){
                 $longstoryButton.attr('src','/img/longStory_storyselect.png');
             }else {
                 $longstoryButton.attr('src','/img/longStory.png');
