@@ -146,9 +146,9 @@ require_once 'classes/contentgenerator.php';
 
             //Changes background every other day
             if(currentTime%2==0) {
-                background.attr('src', 'img/background.png');
-            }else{
                 background.attr('src', 'img/background3.png');
+            }else{
+                background.attr('src', 'img/background.png');
             }
              //Listen to each timeframe button for when they are clicked
 
