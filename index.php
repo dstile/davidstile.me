@@ -1,6 +1,8 @@
 <?php include '_partials/header.php';
+
 require_once 'classes/contentgenerator.php';
 ?>
+
 <!--Background source is set in Javascript based on day of week-->
 <img id="background" class="bg1" alt=""/>
 
@@ -277,6 +279,7 @@ require_once 'classes/contentgenerator.php';
                 if($longstory.is(':hidden')==false || $shortstory.is(':hidden')==false){
                     $mottoimg.fadeOut(500);
                 }
+
             };
         })(jQuery);
 
