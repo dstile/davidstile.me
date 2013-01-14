@@ -1,8 +1,8 @@
 <?php include '_partials/header.php';
 require_once 'classes/contentgenerator.php';
 ?>
-
-<img id="background" class="bg" alt=""/>
+<!--Background source is set in Javascript based on day of week-->
+<img id="background" class="bg1" alt=""/>
 
 <div class="container-fluid">
     <div id = 'corewrap'>
@@ -100,21 +100,20 @@ require_once 'classes/contentgenerator.php';
         </div>
 
     </div>
-
+    <!--PLaced at the end to improve load time -->
+    <img id="background" class="bg2" alt="" src = "img/background1.png"/>
     
 
 
     <?php include '_partials/footer.php' ?>
     <!--if javascript is not enabled default background loads-->
 
-    <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript> 
+    <noscript><img id="background" class="bg1" alt=""/></noscript> 
     <!-- mousewheel plugin -->
     <script src="js/jquery.mousewheel.min.js"></script>
     <!-- custom scrollbars plugin -->
     <script src="js/jquery.mCustomScrollbar.js"></script> 
     <script src="processing-1.4.1.js"></script>
-
-    <noscript><img id="background1" class="bg" alt="" src = "img/background3.png"/></noscript>
 
     <script>  
     var timeclass;
@@ -131,9 +130,10 @@ require_once 'classes/contentgenerator.php';
             //if bottom tab is clicked => hide all current information, change the background
             //AND show most recent blog posts
             $('bottomTab').on('click', function() {  
-                $('body').css('overflow', 'visible');
+                $('body').toggleClass('bodyvis');
                 $('#corewrap').slideToggle(2000);
-                $('img#background.bg').attr('src', 'img/background1.png');
+                $('img#background.bg1').toggleClass('bgopacity1');
+                $('img#background.bg2').toggleClass('bgopacity2');
             });
 
             //Logic for showing and hiding original portions of screen
