@@ -46,15 +46,15 @@ bottomTab {
     border-bottom: none;
     top: 0px;
     position: relative;
-    line-height: 40px;
-    height: 40px;
+    line-height: 60px;
+    height: 60px;
     border-top-right-radius: 1em;
     -moz-border-radius-topright: 1em;
     -webkit-border-top-right-radius: 1em;
     border-top-left-radius: 1em;
     -moz-border-radius-topleft: 1em;
     -webkit-border-top-left-radius: 1em;
-    width: 40%;
+    width: 60%;
     margin: 0px;
     padding: 0px;
     background-color: #ababa0;
@@ -93,12 +93,11 @@ background-color: rgba(255, 255, 255, 0.7);
     overflow: visible;
 }
 
-
-
 .rss {
     float: right;
     padding: 10px;
     display: block;
+    padding-top: 20px;
 }
 
 .tabContent {
