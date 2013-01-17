@@ -148,7 +148,6 @@ require_once 'classes/contentgenerator.php';
 	$congen->proj_content($timeclassoption, $category, $seesawoption);
 	?>
 
-	console.log(projinfoArrayjs);
 
 	var template=[seesawoption,category,timeclass],
 	timeframe = $('#timeframe'),
