@@ -41,7 +41,7 @@ class Congen{
 	function individual_content($post_title)
 	{
 	
-		$encodedpost = mysql_real_escape_string($post_title);
+		
 		//echo $encodedpost;
 		//echo $encoded_post;
 		$projArray = array();		

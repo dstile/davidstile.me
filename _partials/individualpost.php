@@ -46,4 +46,4 @@
             });
 </script>
 </div>
-<a style = 'float: left; padding: 20px;' href='../Personalsite/index.php?get_post=recent'><button>&lt &ltBack</button></a>
+<a style = 'float: left; padding: 20px;' href='http://davidstile.me/index.php?get_post=recent'><button>&lt &ltBack</button></a>
