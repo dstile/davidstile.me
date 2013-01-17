@@ -16,8 +16,6 @@ class Congen{
 				
            // return $mysql->return_proj_info($time,$category);
                 $js_array = json_encode($projArray);//$projinfoArray is index 2
-	
-               
                 echo "projinfoArrayjs = ".$js_array . ";\n";
                 
 	}	
@@ -40,8 +38,6 @@ class Congen{
 
 	function individual_content($post_title)
 	{
-	
-		
 		//echo $encodedpost;
 		//echo $encoded_post;
 		$projArray = array();		

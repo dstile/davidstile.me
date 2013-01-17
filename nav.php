@@ -1,12 +1,14 @@
-
 <?php
+//determine whether or not to hide the project options
 if (($_GET['category'] == "")) {
 	$hideproject = TRUE;
 } else {
 	$hideproject = FALSE;
 }
+
+include '_partials/header.php';
+require_once 'classes/contentgenerator.php';
 ?>
-<?php include '_partials/header.php' ?>
 
 <img src="img/background1.png" class="bg"/> 
 <div class="container-fluid">
@@ -111,6 +113,7 @@ if (($_GET['category'] == "")) {
 	</div> 
 </div>
 
+
 <!--mousewheel plugin -->
 <script src="js/jquery.mousewheel.min.js"></script>
 <!-- custom scrollbars plugin -->
@@ -125,28 +128,30 @@ if (($_GET['category'] == "")) {
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script>
 
-var projinfoArrayjs = new Array();
-
-<?php
-$timeclassoption = $_GET['timeclassoption'];
-$category = $_GET['category'];
-$seesawoption = $_GET['seesawoption'];
-$js_convert = json_encode($hideproject);
-echo "var hideproject =" . $js_convert . ";\n";
-$js_convert = json_encode($timeclassoption);
-echo "var timeclass =" . $js_convert . ";\n";
-$js_convert = json_encode($category);
-echo "var category = " . $js_convert . ";\n";
-$js_convert = json_encode($seesawoption);
-echo "var seesawoption= " . $js_convert . ";\n";
-$congen = new Congen();
-$congen->proj_content($timeclassoption, $category, $seesawoption);
-?>
 
 
+(function($){
+	var projinfoArrayjs = new Array();
+	console.log('test');
+	<?php
+	$timeclassoption = $_GET['timeclassoption'];
+	$category = $_GET['category'];
+	$seesawoption = $_GET['seesawoption'];
+	$js_convert = json_encode($hideproject);
+	echo "var hideproject =" . $js_convert . ";\n";
+	$js_convert = json_encode($timeclassoption);
+	echo "var timeclass =" . $js_convert . ";\n";
+	$js_convert = json_encode($category);
+	echo "var category = " . $js_convert . ";\n";
+	$js_convert = json_encode($seesawoption);
+	echo "var seesawoption= " . $js_convert . ";\n";
+	$congen = new Congen();
+	$congen->proj_content($timeclassoption, $category, $seesawoption);
+	?>
 
-(function($) {
-	var template=[seesawoption,category,timeclass];
+	console.log(projinfoArrayjs);
+
+	var template=[seesawoption,category,timeclass],
 	timeframe = $('#timeframe'),
 	lifetemp = $('#topicholder'),
 	wrapper = $('#wrapper'),
@@ -238,16 +243,16 @@ $congen->proj_content($timeclassoption, $category, $seesawoption);
 		document.menuform.timeclassoption.value = timeclass;
 		document.menuform.seesawoption.value = seesawoption;
 		document.menuform.submit();
-	}
+	};
 
 
 
-//This is a plugin that pulls in the window with the scroll bar for content
-$(".contentNav").mCustomScrollbar({
-	scrollButtons:{
-		enable:true
-	}
-});
+	//This is a plugin that pulls in the window with the scroll bar for content
+	$(".contentNav").mCustomScrollbar({
+		scrollButtons:{
+			enable:true
+		}
+	});
 
 	//This function scales the map coordinates (hot spots) with the image div
 	$(window).bind("load resize", function(){
@@ -282,6 +287,5 @@ $(".contentNav").mCustomScrollbar({
 	});
 	
 })(jQuery);
-
 </script>
 <?php include '_partials/footer.php' ?>

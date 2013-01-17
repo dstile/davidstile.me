@@ -109,7 +109,7 @@ else {
         <div class = 'row-fluid tabContent'>
             <div class ='offset2 span10 row'>
                 <bottomTab class='center'>
-                    Latest & Greatest
+                    Latest Updates
                 </bottomTab>
             </div>
 
@@ -173,8 +173,8 @@ var timeclass;
              bottomTab.on('click', function() {  
                 $('body').toggleClass('bodyvis');
                 $('#corewrap').slideToggle(2000);
-                $('img#background.bg1').toggleClass('bgopacity1');
-                $('img#background.bg2').toggleClass('bgopacity2');
+                $('img#background.bg1').toggleClass('bgopacity1',1000);
+                $('img#background.bg2').toggleClass('bgopacity2', 1000);
             });
 
             //Logic for showing and hiding original portions of screen
