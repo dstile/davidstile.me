@@ -1,6 +1,5 @@
 
 <?php
-require_once 'classes/contentgenerator.php';
 if (($_GET['category'] == "")) {
 	$hideproject = TRUE;
 } else {

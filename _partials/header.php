@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>David Stile</title>
+    <title>David Stile - Engineer/Programmer/Musician </title>
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="My space for sharing works and spreading knowledge related to <strong>Technology</strong> & <strong>Music</strong>!" />
      <link rel="alternate" type="application/rss+xml" 
    href="rss/feed.rss" title="RSS feed for DavidStile.me">
     <link href="css/personal.css" rel="stylesheet">

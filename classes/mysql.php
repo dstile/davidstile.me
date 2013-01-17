@@ -69,6 +69,26 @@ class Mysql {
         return $relprojects;
     }
 
+      //for individual posts
+    function return_individual_info($post_title) {
+        /* Preparing selection statement */
+
+        $relprojects = array();
+        $query = "SELECT * FROM posts WHERE posthead = '".$post_title."'";
+
+        if ($result = $this->conn->query($query)) {
+
+            while ($myrow = $result->fetch_array()) {
+                $relprojects[] = $myrow;
+            }
+            $result->close();
+        }
+        /* close statement */
+
+        //return $relprojects;
+        return $relprojects;
+    }
+
 }
 
 ?>

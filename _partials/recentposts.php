@@ -1,11 +1,15 @@
+
+ <form name = 'getpost' method="get" action = 'index.php'>
+           <input type='hidden' name='get_post'> 
+</form>
 <script id="header-template" type="text/x-handlebars-template">
-			<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
-			</script>
+<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
+</script>
 <div id='content-stream' class = 'center'>
 <script id="recentpost-template" type="text/x-handlebars-template">
 	{{#each this}}
 		<container class= "newRow">
-		<posthead>{{posthead}}</posthead>
+         <a href={{headerlink}}><posthead>{{{posthead}}}</posthead></a>
 		<datesequence>{{{datesequence}}}</datesequence>
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 		<article>{{{article}}}</article>
@@ -20,12 +24,13 @@
   //Logic for generating most recent posts
 
             var projinfoArrayjs = new Array();
-
+           
             <?php
             $congen = new Congen();
             $congen->recent_content();
             ?>
-
+         
+         
             var header= [
             {
                 headerText: 'Most Recent Posts.'
@@ -40,10 +45,11 @@
                 header: header[0]
             });
 
-            console.log(projinfoArrayjs);
-            </script>
-
-
-
-
+            //submits link to get blog page
+            function getpost(post_title)
+            {
+            document.getpost.get_post.value = post_title ;
+            document.getpost.submit();
+        };
+        </script>
 </div>
