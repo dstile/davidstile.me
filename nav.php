@@ -132,7 +132,6 @@ require_once 'classes/contentgenerator.php';
 
 (function($){
 	var projinfoArrayjs = new Array();
-	console.log('test');
 	<?php
 	$timeclassoption = $_GET['timeclassoption'];
 	$category = $_GET['category'];

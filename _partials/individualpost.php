@@ -30,7 +30,7 @@
     $congen = new Congen();
     $congen->individual_content($post);
   ?>
- console.log(projinfoArrayjs);
+
             var header= [
             {
                 headerText: 'THE STILE LOG'
