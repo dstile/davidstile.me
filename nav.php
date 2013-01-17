@@ -127,11 +127,14 @@ require_once 'classes/contentgenerator.php';
 <!--Twitter API Library -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script>
-
+var timeclass,
+seesawoption,
+category;
 
 
 (function($){
 	var projinfoArrayjs = new Array();
+	
 	<?php
 	$timeclassoption = $_GET['timeclassoption'];
 	$category = $_GET['category'];
@@ -139,15 +142,14 @@ require_once 'classes/contentgenerator.php';
 	$js_convert = json_encode($hideproject);
 	echo "var hideproject =" . $js_convert . ";\n";
 	$js_convert = json_encode($timeclassoption);
-	echo "var timeclass =" . $js_convert . ";\n";
+	echo "timeclass =" . $js_convert . ";\n";
 	$js_convert = json_encode($category);
-	echo "var category = " . $js_convert . ";\n";
+	echo "category = " . $js_convert . ";\n";
 	$js_convert = json_encode($seesawoption);
-	echo "var seesawoption= " . $js_convert . ";\n";
+	echo "seesawoption= " . $js_convert . ";\n";
 	$congen = new Congen();
 	$congen->proj_content($timeclassoption, $category, $seesawoption);
 	?>
-
 
 	var template=[seesawoption,category,timeclass],
 	timeframe = $('#timeframe'),
