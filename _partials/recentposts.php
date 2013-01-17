@@ -9,7 +9,7 @@
 <script id="recentpost-template" type="text/x-handlebars-template">
 	{{#each this}}
 		<container class= "newRow">
-         <a href={{headerlink}}><posthead>{{{posthead}}}</posthead></a>
+         <a href={{{headerlink}}}><posthead>{{{posthead}}}</posthead></a>
 		<datesequence>{{{datesequence}}}</datesequence>
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 		<article>{{{article}}}</article>
