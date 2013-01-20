@@ -1,5 +1,5 @@
 <script id="header-template" type="text/x-handlebars-template">
-	<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
+	<div class="sectionHeader">{{sectionHeader}}</div>
 </script>
 <div id='content-stream' class = 'center'>
 <script id="individualpost-template" type="text/x-handlebars-template">
