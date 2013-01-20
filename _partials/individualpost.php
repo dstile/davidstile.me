@@ -11,7 +11,7 @@
 		<article>{{{article}}}</article>
 		{{#if media}}<media>{{{media}}}</media>{{/if}}
 		</container>
-        <div id={{id}} class='comments'></div>  	
+       	
 		{{/each}}
         
          
@@ -53,7 +53,7 @@
             });
 </script>
 </div>
-
+<!--<div id={{id}} class='comments'></div>  -->
 
  
 
