@@ -10,8 +10,13 @@
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 		<article>{{{article}}}</article>
 		{{#if media}}<media>{{{media}}}</media>{{/if}}
-		</container>	
+		</container>
+        <div id={{id}} class='comments'></div>  	
 		{{/each}}
+        
+         
+
+
 
 </script>
 
@@ -46,4 +51,8 @@
             });
 </script>
 </div>
+
+
+ 
+
 <a style = 'float: left; padding: 20px;' href='http://davidstile.me/index.php?get_post=recent'><button>&lt &ltBack</button></a>

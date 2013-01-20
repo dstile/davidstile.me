@@ -186,6 +186,7 @@ var Individualpost = {
 						//object within data.results.  I named this instance to make it easier to see
 						return {
 							//recreate the data that needs to be pulled in
+							id: instance.id,
 							posthead: instance.posthead,
 							datesequence: instance.datesequence,
 							picture: instance.picture,

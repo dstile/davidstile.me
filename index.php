@@ -123,7 +123,8 @@ else {
             }
 
                 ?>
-            </div>
+            
+            
         </div>
 
     </div>
@@ -148,6 +149,8 @@ else {
 
 var timeclass;
 (function($){
+            //Engage easy comment plug-in
+              $(".comments").EasyComment();
 
             //Main Navigation page slider
 
