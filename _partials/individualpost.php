@@ -35,6 +35,8 @@
     $congen = new Congen();
     $congen->individual_content($post);
   ?>
+            
+
 
             var header= [
             {
