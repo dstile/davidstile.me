@@ -149,12 +149,7 @@ else {
 
 var timeclass;
 (function($){
-            //Engage easy comment plug-in
-              $(".comments").EasyComment({
-                path:"./easy-comment/",
-                moderate: false,
-                maxReply: 5
-              });
+
 
             //Main Navigation page slider
 
