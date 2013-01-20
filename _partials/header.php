@@ -22,7 +22,7 @@
    
 
 <script type="text/javascript" 
-        src="http://www.davidstile.me/easy-comment/jquery.easy-comment.min.js"></script>
+        src="http://www.davidstile.me/easy-comment/jquery.easy-comment.js"></script>
 
 </head>
 <body>
