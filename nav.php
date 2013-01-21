@@ -9,7 +9,7 @@ if (($_GET['category'] == "")) {
 include '_partials/header.php';
 require_once 'classes/contentgenerator.php';
 ?>
-<body>
+<body class='nav'>
 <img src="img/background1.png" class="bg"/> 
 <div class="container-fluid">
 	<form name="menuform" method="get" action="nav.php"> 

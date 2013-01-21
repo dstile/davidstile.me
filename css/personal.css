@@ -6,8 +6,8 @@
         Purpose of the stylesheet follows.
 */
 
-body.index { 
-    overflow: hidden;
+body.nav { 
+    overflow: visible;
     }
  a { 
     position: relative;
@@ -49,6 +49,7 @@ div.comments {
 }
 
 bottomTab {
+    font-size: 1.2em;
     display: block;
     border: 1px solid  #222220;
     border-bottom: none;
