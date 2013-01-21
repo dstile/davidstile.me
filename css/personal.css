@@ -9,6 +9,12 @@
 body.nav { 
     overflow: visible;
     }
+
+    body {
+        overflow: hidden;
+    }
+
+
  a { 
     position: relative;
     margin: 0;

@@ -181,25 +181,25 @@ category;
 				category: 'technology',
 				logo: '/img/Logo.png',
 				button: '/img/topiclogos-design.png', 
-				headerText: 'The things I Create, Design and Engineer.'
+				headerText: 'The Things I Create, Design and Engineer'
 			},
 			{
 				category: 'music',
 				logo: '/img/Logoguitar.png',
 				button: '/img/topiclogos-music.png',
-				headerText: 'Music contained in this section is all original composition using computer, guitar and keyboard.  Enjoy!'
+				headerText: 'My Music.  Enjoy!'
 			},
 			{
 				category: 'activities',
 				logo: '/img/Logo.png',
 				button:  '/img/topiclogos-activities.png', 
-				headerText: 'The organizations and activities where I am involved.'
+				headerText: 'Organizations and Activities'
 			},
 			{
 				category: 'inspiration',
 				logo: '/img/Logo.png',
 				button: '/img/topiclogos-inspirations.png',
-				headerText: 'All the people/projects/things that are interesting, creative, inspiring.'
+				headerText: 'All the People/Projects/Things that are Interesting, Creative, Inspiring.'
 			}];
 		//This portion of code tweaks different areas of the website according to the category selected 
 		var logoImg = $('#Logo'),
