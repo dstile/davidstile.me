@@ -135,7 +135,7 @@ var Recentposts = {
 							datesequence: instance.datesequence,
 							picture: instance.picture,
 							//Limit number of characters that display to 250
-							article: instance.description.substr(0,250),
+							article: instance.description.substr(0,350),
 							media: instance.media,
 							
 						};
