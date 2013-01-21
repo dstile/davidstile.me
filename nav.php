@@ -9,7 +9,7 @@ if (($_GET['category'] == "")) {
 include '_partials/header.php';
 require_once 'classes/contentgenerator.php';
 ?>
-
+<body>
 <img src="img/background1.png" class="bg"/> 
 <div class="container-fluid">
 	<form name="menuform" method="get" action="nav.php"> 
@@ -17,6 +17,8 @@ require_once 'classes/contentgenerator.php';
 		<input type="hidden" name="seesawoption"/>
 		<input type="hidden" name="category"/>
 	</form>
+
+	<div id='navigation'>
 
 	<div class="row-fluid">   
 		<div class="offset4 span4">
@@ -65,6 +67,7 @@ require_once 'classes/contentgenerator.php';
 			</div>
 		</div> 
 	</div>
+	</div>
 
 
 	<div class="row-fluid">
@@ -112,6 +115,7 @@ require_once 'classes/contentgenerator.php';
 		</div>	
 	</div> 
 </div>
+<?php include '_partials/footer.php' ?>
 
 
 <!--mousewheel plugin -->
@@ -133,7 +137,10 @@ category;
 
 
 (function($){
-	var projinfoArrayjs = new Array();
+	var projinfoArrayjs = new Array(),
+	contentHeight = 0.5*$(window).height();
+	
+	$('.contentNav').css('height', contentHeight);
 	
 	<?php
 	$timeclassoption = $_GET['timeclassoption'];
@@ -288,4 +295,3 @@ category;
 	
 })(jQuery);
 </script>
-<?php include '_partials/footer.php' ?>

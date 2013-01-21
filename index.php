@@ -18,7 +18,7 @@ else {
 }
 ?>
 
-
+<body class='index'>
 
 <!--Background source is set in Javascript based on day of week-->
 <img id="background" class="bg1" alt=""/>
