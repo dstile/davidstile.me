@@ -134,8 +134,10 @@ var Recentposts = {
 							posthead: instance.posthead,
 							datesequence: instance.datesequence,
 							picture: instance.picture,
-							article: instance.description,
-							media: instance.media
+							//Limit number of characters that display to 250
+							article: instance.description.substr(0,250),
+							media: instance.media,
+							
 						};
 					});
 
@@ -191,7 +193,8 @@ var Individualpost = {
 							datesequence: instance.datesequence,
 							picture: instance.picture,
 							article: instance.description,
-							media: instance.media
+							media: instance.media,
+							category: instance.category
 						};
 					});
 					

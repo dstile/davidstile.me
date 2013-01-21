@@ -3,7 +3,7 @@
            <input type='hidden' name='get_post'> 
 </form>
 <script id="header-template" type="text/x-handlebars-template">
-<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
+<div class="sectionHeader">{{sectionHeader}}</div>
 </script>
 <div id='content-stream' class = 'center'>
 <script id="recentpost-template" type="text/x-handlebars-template">
@@ -12,7 +12,7 @@
          <a href={{{headerlink}}}><posthead>{{{posthead}}}</posthead></a>
 		<datesequence>{{{datesequence}}}</datesequence>
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
-		<article>{{{article}}}</article>
+		<article>{{{article}}}...</article>
 		{{#if media}}<media>{{{media}}}</media>{{/if}}
 		</container>	
 		{{/each}}
@@ -33,7 +33,7 @@
          
             var header= [
             {
-                headerText: 'Most Recent Posts.'
+                headerText: 'Most Recent Posts'
             }];
 
             Recentposts.init({

@@ -72,7 +72,7 @@ require_once 'classes/contentgenerator.php';
 
 			
 			<script id="header-template" type="text/x-handlebars-template">
-			<div class="sectionHeader"><h3>{{sectionHeader}}</h3></div>
+			<div class="sectionHeader">{{sectionHeader}}</div>
 			</script>
 			<!--Template used when Life is selected-->
 			<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rss' src= "img/rss.png"/></a>

@@ -1,12 +1,13 @@
 <script id="header-template" type="text/x-handlebars-template">
-	<div class="sectionHeader">{{sectionHeader}}</div>
+	<div class='sectionHeader'>{{sectionHeader}}</div>
 </script>
 <div id='content-stream' class = 'center'>
 <script id="individualpost-template" type="text/x-handlebars-template">
 		{{#each this}}
         <container>
 		<posthead>{{posthead}}</posthead>
-		<datesequence>{{{datesequence}}}</datesequence>
+		<datesequence>{{{datesequence}}}</datesequence><category>Category: {{category}} </category>
+        
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 		<article>{{{article}}}</article>
 		{{#if media}}<media>{{{media}}}</media>{{/if}}

@@ -105,7 +105,7 @@ background-color: rgba(255, 255, 255, 0.7);
     float: right;
     padding: 10px;
     display: block;
-    padding-top: 20px;
+    padding-top: 2.5em;
 }
 
 .tabContent {
@@ -129,15 +129,30 @@ div {
 
 posthead {
    text-align: center;
-   font-size: 1.5em;
+   font-size: 1.6em;
    display: block;
     
 }
 
 .sectionHeader {
     padding: 0.8em;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
+}
+
+category {
+   margin-right: 5.8em;
+    text-align: right;
+    width: 100%;
+    font-size: 1em;
+    color: gray;
+    display: inline-block;
+ 
+}
+
+media {
+ font-size: 1.5em;
+    
 }
 
 
@@ -145,24 +160,26 @@ article {
     line-height: 140%;
     padding-top: 1em;
     padding-bottom: 2em;
-    padding-left: 5.8em;
-    padding-right: 5.8em;
+    padding-left: 4.5em;
+    padding-right: 4.5em;
     text-align: left;
     font-size: 1.5em;
 }
 
 picture {
-
     padding: 1em;
+    display: block;
    
-
 }
 
+
 description {
-   font-family: 'Scada', sans-serif;
-   font-size: 16px;
+   font-size: 1.5em;
    display: block;
    text-align: left;
+   padding-left: 5em;
+   padding-right: 5em;
+   line-height: 100%;
 
    margin-top: .5em;
 
@@ -171,14 +188,16 @@ description {
       -webkit-margin-start: 0px;
       -webkit-margin-end: 0px;
 }
+
+
 datesequence {
     
    font-style: italic;
-   display: block;
+   display: inline-block;
 }
 img {
     border:none;
-    padding-top: 1em;
+   
    
 } 
 p { 
