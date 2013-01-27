@@ -11,7 +11,8 @@
 	{{#each this}}
 		<container class= "newRow">
          <a href={{{headerlink}}}><posthead>{{{posthead}}}</posthead></a>
-		<datesequence>{{{datesequence}}}</datesequence>
+         <category><span style="color:black">Category: </span><a href="/nav.php?category={{category}}&timeclassoption={{timeframe}}&seesawoption={{seesawoption}}"> {{category}}</a> </category>
+		<datesequence><span style="color:black">Published: </span><i>{{{datesequence}}}</i></datesequence>
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 		<article>{{{article}}}...</article>
 		{{#if media}}<media>{{{media}}}</media>{{/if}}

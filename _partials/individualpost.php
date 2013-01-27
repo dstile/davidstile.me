@@ -1,13 +1,15 @@
 <script id="header-template" type="text/x-handlebars-template">
 	<div class='sectionHeader'>{{sectionHeader}}</div>
+
 </script>
-<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rssRecent' src= "img/rss.png"/></a>
+    <a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rssRecent' src= "img/rss.png"/></a>
 <div id='content-stream' class = 'center'>
 <script id="individualpost-template" type="text/x-handlebars-template">
 		{{#each this}}
         <container>
-		<posthead>{{posthead}}</posthead><category><span style="color:black">Category: </span><a href="/nav.php?category={{category}}&timeclassoption={{timeframe}}&seesawoption={{seesawoption}}"> {{category}}</a> </category>
-		<datesequence>{{{datesequence}}}</datesequence>
+		<posthead>{{posthead}}</posthead>
+        <category><span style="color:black">Category: </span><a href="/nav.php?category={{category}}&timeclassoption={{timeframe}}&seesawoption={{seesawoption}}"> {{category}}</a> </category>
+		<datesequence><span style="color:black">Published: </span><i>{{{datesequence}}}</i></datesequence>
         
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 		<article>{{{article}}}</article>
@@ -52,10 +54,11 @@
                 header: header[0]
             });
 </script>
-</div>
+
 <br />
 <br />
    <div id="disqus_thread" class = 'comments'></div>
+   <a class='back' href='http://davidstile.me/index.php?get_post=recent'><img src= '/img/back_button.png'/></a>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'davidstile'; // required: replace example with your forum shortname
@@ -70,4 +73,4 @@
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-<a style = 'float: left; padding: 20px;' href='http://davidstile.me/index.php?get_post=recent'><img src= '/img/back_button.png'/a>
+</div>

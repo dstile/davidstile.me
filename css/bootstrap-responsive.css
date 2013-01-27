@@ -33,17 +33,7 @@ canvas{
   display: none;
  
 }
-.sectionHeader {
-    border-top-width: thin;
-    border-top-style: dotted;
-    border-top-color: #FF0000;
-    border-bottom-width: thin;
-    border-bottom-style: dotted;
-    border-bottom-color: #FF0000;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    color: black; 
-}
+
 .rounded {
     
     border-radius: 15px;

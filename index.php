@@ -112,9 +112,8 @@ else {
                 <bottomTab class='center'>
                     Latest Updates
                 </bottomTab>
-            </div>
-
-            <div class = 'offset2 span9 recentContainer row'>                 
+            
+            <div class = 'recentContainer'>               
                 <?php 
                 if ($template == 'default' || $template =='recent') {
                 include '_partials/recentposts.php'; 
@@ -125,9 +124,11 @@ else {
             }
 
                 ?>
+          </div>
+  
             
-            
-        </div>
+      
+    </div>
 
     </div>
     <!--PLaced at the end to improve load time -->
