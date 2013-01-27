@@ -5,7 +5,7 @@
 <script id="individualpost-template" type="text/x-handlebars-template">
 		{{#each this}}
         <container>
-		<posthead>{{posthead}}</posthead><category><span style="color:black">Category: </span><a href="www.davidstile.me/nav.php?category={{category}}&timeclassoption={{timeframe}}&seesawoption={{seesawoption}}"> {{category}}</a> </category>
+		<posthead>{{posthead}}</posthead><category><span style="color:black">Category: </span><a href="/nav.php?category={{category}}&timeclassoption={{timeframe}}&seesawoption={{seesawoption}}"> {{category}}</a> </category>
 		<datesequence>{{{datesequence}}}</datesequence>
         
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
