@@ -5,6 +5,7 @@
 <script id="header-template" type="text/x-handlebars-template">
 <div class="sectionHeader">{{sectionHeader}}</div>
 </script>
+<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rssRecent' src= "img/rss.png"/></a>
 <div id='content-stream' class = 'center'>
 <script id="recentpost-template" type="text/x-handlebars-template">
 	{{#each this}}

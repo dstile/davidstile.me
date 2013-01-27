@@ -80,6 +80,7 @@ else {
                         <br /><br />
                         Fast forward to today and I am an aspiring programmer/software developer with a range of interests spanning interactive media (think Kinect meets sensors meets music meets complete sensory overload), web design, and software development.</description>
                         <div>
+                            <br />
                             <a href='http://www.github.com/dstile/' title='github link'><img class='icon center' src='/img/github-icon.png'/></a>
                             <a href='http://www.twitter.com/David_Stile/' title='twitter link'><img class='icon center' src='/img/twitter-icon.png'/></a>
                         </div>
@@ -120,7 +121,7 @@ else {
             } elseif ($template == 'individual') {
 
                 include '_partials/individualpost.php'; 
-            
+
             }
 
                 ?>

@@ -117,6 +117,18 @@ background-color: rgba(255, 255, 255, 0.7);
     padding-top: 2.5em;
 }
 
+.rssRecent {
+    float: right;
+    display: block;
+    padding: 2.5em;
+
+}
+
+#individualpost-template.rss {
+padding: 2.5em;
+
+}
+
 .tabContent {
 width:100%;
 height: 2em;
