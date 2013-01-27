@@ -55,7 +55,9 @@ div.comments {
 }
 
 bottomTab {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     font-size: 1.2em;
+    font-color: gray;
     display: block;
     border: 1px solid  #222220;
     border-bottom: none;
@@ -148,12 +150,13 @@ posthead {
 }
 
 category {
-   margin-right: 5.8em;
-    text-align: right;
+   float: left;
+   padding-left: 4.5em;
+    text-align: left;
     width: 100%;
     font-size: 1em;
     color: gray;
-    display: inline-block;
+    display: block;
  
 }
 
@@ -548,6 +551,19 @@ position: absolute;
     padding-left: 1px;
     margin-left: 50px;
     
+}
+
+.rounded1 {
+border-radius: 15px;
+border: solid black thin;
+
+}
+
+.quote {
+
+  margin-left: 15%;
+  margin-right: 15%;
+  font-style: italic;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */

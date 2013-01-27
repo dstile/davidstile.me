@@ -51,18 +51,7 @@ canvas{
 border: solid #EBFF00 thin;
 }
 
-.rounded1 {
-border-radius: 15px;
-border: solid #637DEC thin;
 
-}
-
-.quote {
-
-  margin-left: 15%;
-  margin-right: 15%;
-  font-style: italic;
-}
 
 div {
     text-align: center;

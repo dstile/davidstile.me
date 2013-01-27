@@ -194,7 +194,9 @@ var Individualpost = {
 							picture: instance.picture,
 							article: instance.description,
 							media: instance.media,
-							category: instance.category
+							category: instance.category,
+							timeframe: instance.time_classification,
+							seesawoption: instance.seesawoption
 						};
 					});
 					

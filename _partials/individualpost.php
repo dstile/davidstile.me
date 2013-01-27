@@ -5,8 +5,8 @@
 <script id="individualpost-template" type="text/x-handlebars-template">
 		{{#each this}}
         <container>
-		<posthead>{{posthead}}</posthead>
-		<datesequence>{{{datesequence}}}</datesequence><category>Category: {{category}} </category>
+		<posthead>{{posthead}}</posthead><category><span style="color:black">Category: </span><a href="www.davidstile.me/nav.php?category={{category}}&timeclassoption={{timeframe}}&seesawoption={{seesawoption}}"> {{category}}</a> </category>
+		<datesequence>{{{datesequence}}}</datesequence>
         
 		{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 		<article>{{{article}}}</article>
@@ -37,8 +37,6 @@
     $congen->individual_content($post);
   ?>
             
-
-
             var header= [
             {
                 headerText: 'THE STILE LOG'
@@ -71,4 +69,4 @@
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-<a style = 'float: left; padding: 20px;' href='http://davidstile.me/index.php?get_post=recent'><button>&lt &ltBack</button></a>
+<a style = 'float: left; padding: 20px;' href='http://davidstile.me/index.php?get_post=recent'><img src= '/img/back_button.png'/a>

@@ -25,7 +25,7 @@ else {
 
 <div class="container-fluid">
     <div id = 'corewrap'>
-        <br />  <br />  
+        <br />  
         <div class='row-fluid'>
             <div class='offset2 span10'>
 
@@ -41,7 +41,7 @@ else {
 
 
                 <img id='short' title="Short Story Button" class='center inline-block' src='/img/shortStory.png'/>
-                <img id='long' title="Long Story Button" class='center inline-block' src='/img/longStory.png'/>
+                <a href = "http://davidstile.me/nav.php?timeclassoption=present&seesawoption=life&category=technology"><img id='long' title="Long Story Button" class='center inline-block' src='/img/longStory.png'/></a>
 
                 <form name="menuform" method="get" action="nav.php">    
                     <input type="hidden" name="timeclassoption"/>
@@ -73,20 +73,20 @@ else {
                 <section id='shortstory' class='transbackground rounded contentIndex center'>
                     <u><i><h1>The Short Story</h1></i></u>
                     <h2 class='center'>About Me</h2>
-                    <p class='intro'>I am a technology enthusiast with a passion for developing and creating unique products.  My ultimate goal is for end users to find true enjoyment and/or utility from my works. My past background and work is diverse and broad in scope. 
+                    <description>I am a technology enthusiast with a passion for developing and creating unique products.  My ultimate goal is for end users to find true enjoyment and/or utility from my works. My past background and work is diverse and broad in scope. 
                         <br />
                         <br />
                         I studied Mechanical Engineering at the University of Michigan and subsequently performed work in both strategy and execution based consulting roles. Much of this work was focused on Product Lifecycle Management and Supply Chain Management.
                         <br /><br />
-                        Fast forward to today and I am an aspiring programmer/software developer with a range of interests spanning interactive media (think Kinect meets sensors meets music meets complete sensory overload), web design, and software development.</p>
+                        Fast forward to today and I am an aspiring programmer/software developer with a range of interests spanning interactive media (think Kinect meets sensors meets music meets complete sensory overload), web design, and software development.</description>
                         <div>
                             <a href='http://www.github.com/dstile/' title='github link'><img class='icon center' src='/img/github-icon.png'/></a>
                             <a href='http://www.twitter.com/David_Stile/' title='twitter link'><img class='icon center' src='/img/twitter-icon.png'/></a>
                         </div>
                         <h2 class='center'>About this Website</h2>
 
-                        <p class='intro'>This website was one of my first personal coding projects.  I made it a point to develop it from scratch.  No Drupal, and no Wordpress. I am not opposed to them but I really just wanted to learn what goes on behind the scenes as much as possible.  It was developed using:</p> 
-                        <div class = 'intro'>
+                        <description>This website was one of my first personal coding projects.  I made it a point to develop it from scratch.  No Drupal, and no Wordpress. I am not opposed to them but I really just wanted to learn what goes on behind the scenes as much as possible.  It was developed using:</description> 
+                        <description>
                             <ul>
                                 <li>Javascript (with plenty of jQuery help)</li>
                                 <li>PHP</li>
@@ -95,8 +95,8 @@ else {
                                 <li>Processing.js(the animated work/life balance seesaw)</li>
                                 <li>javascript plugin developed by Brandon Aaron for my scrolling content window.</li>
                             </ul>
-                        </div>
-                        <p class='intro'>This site will always be a work in progress.  My latest updates have been integrating Handlebars.js for templating, using more OOO programming to clean up the coding structure for improved modularity, as well as building in more ajax to reduce number of full page refreshes required.</p>
+                        </description>
+                        <description>This site will always be a work in progress.  My latest updates have been integrating Handlebars.js for templating, using more OOO programming to clean up the coding structure for improved modularity, as well as building in more ajax to reduce number of full page refreshes required.</description>
                     </section>
                     <script type="text/javascript">
                     var $shortstory=$('div #shortstory');
@@ -120,6 +120,7 @@ else {
             } elseif ($template == 'individual') {
 
                 include '_partials/individualpost.php'; 
+            
             }
 
                 ?>
@@ -229,7 +230,7 @@ var timeclass;
                     $this.attr('src','/img/shortStory_clicked.png' );
                 }else{
                     if(status_main>1){
-                        $this.attr('src','/img/shortStory_storyselect.png');
+                        $this.attr('src','/img/shortStory.png');
                     }else{
                         $this.attr('src','/img/shortStory.png');
                     }
@@ -247,7 +248,7 @@ var timeclass;
                     $this.attr('src','/img/longStory_clicked.png' );
                 }else{
                     if(status_main>1){
-                        $this.attr('src','/img/longStory_storyselect.png');
+                        $this.attr('src','/img/longStory.png');
                     }else{
                         $this.attr('src','/img/longStory.png');
                     }
@@ -262,7 +263,7 @@ var timeclass;
              $this= $(this);
              $this.attr('src','/img/shortStory_clicked.png');
              if(status_main>1){
-                $longstoryButton.attr('src','/img/longStory_storyselect.png');
+                $longstoryButton.attr('src','/img/longStory.png');
             }else {
                 $longstoryButton.attr('src','/img/longStory.png');
             }
@@ -275,32 +276,7 @@ var timeclass;
             });
         });
 
-            $longstoryButton.on('click', function(){
-                status_long += 1;
-                status_main +=1;
-                status_short=1;
-                $this= $(this);
-                $this.attr('src','/img/longStory_clicked.png');
-                if(status_main>1){
-                    $shortstoryButton.attr('src','/img/shortStory_storyselect.png');
-                }else {
-                    $shortstoryButton.attr('src','/img/shortStory.png');
-                }
-                $mottoimg.hide();
-                $longstory.animate({opacity: 'toggle'},500,function(){
-                    if($shortstory.is(':hidden')==false){
-                        $shortstory.fadeOut();
-                    }
-                    checkmotto();
-                });
-            });
-
-
-            $(".contentIndex").mCustomScrollbar({
-                scrollButtons:{
-                    enable:true
-                }
-            });
+           
 
             function worklife(){
                 if($("#wrapper").is(":hidden")) 
