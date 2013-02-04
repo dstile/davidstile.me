@@ -41,8 +41,8 @@
 
 <p>The first time I attempted to access an RSS feed, I have to admit, I got a bit frustrated.  I didn't really understand how it worked.  In my head, I was thinking it would involve just clicking on the button that looks like this:<img src= "/img/rss-icon.png" alt= "rss icon">   and magically the article would show up in my chosen reader.  Rather than the functionality working as I envisioned, what actually happens is you are taken to a page that look like this:</p>
 
-<a href="#general">Section 1: Practical Explanation (For Everyday Users)</a><br />
-<a href="#technical">Section 2: Setting up RSS for your Website (For Developers)</a>
+<a href="http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds#general">Section 1: Practical Explanation (For Everyday Users)</a><br />
+<a href="http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds#technical">Section 2: Setting up RSS for your Website (For Developers)</a>
 			]]></content:encoded>
 </item>
 
