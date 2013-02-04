@@ -9,6 +9,44 @@
 <description>Interesting tidbits and findings from my daily endeavors</description>
 <atom:link href="http://davidstile.me/rss/feed.rss" rel="self" type="application/rss+xml" />
 
+
+<item>
+<title>Everything You Ever Cared to Know About RSS Feeds</title>
+<category>Learning</category>
+<link>http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds</link>
+<pubDate>Mon, 04 Feb 2013 08:00:10 -0800</pubDate>
+<guid isPermaLink="true">http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds</guid>
+<content:encoded><![CDATA[
+			<p><strong>RSS</strong> stands for Rich Site Summary.  Recently, the term has come up in the media more often with the passing of Aaron Swartz, one of the co-founders of RSS 1.0.  I began work on this article right before the news broke, and though I had not heard about him before it spurred me to do some research. He seemed to be a person genuinely passionate about making information accessible to everyone, a concept that I fully support.  Knowledge should be freely accessible so that any person has the opportunity to succeed if they possess the motivation.  RSS contributes to this objective by making it easier to get information.  In sum, RSS is a tool for easily subscribing to website updates.   It eliminates the inconvenience of needing to manually visit each website and parse old  versus new content.</p>
+
+<a href="#general">Section 1: Practical Explanation (For Everyday Users)</a><br />
+<a href="#technical">Section 2: Setting up RSS for your Website (For Developers)</a>
+
+
+<h1 id="general">Section 1: Practical Explanation</h1>
+
+<h2>Why use them?</h2>
+
+<p>The intent for an RSS feed is to simplify the process of getting updates from all of your favorite websites without having to visit each one.  It saves the readers' time and streamlines the process of finding future articles of interest.   If you read an article from an author/site you really like and believe that there is potential for future articles to provide the same value, you can subscribe to the site's RSS feed.  All you will need to do is open your favorite RSS reader, and the tool will automatically scour all your tagged sites and provide article titles along with descriptions.  If your interest is captured, click on the tagged article to load the article or site.</p>
+
+<p>Now you can spend less time trying to remember what sites you want to visit, and more time reading or searching for new sites.</p> 
+
+<h2>What tools you need for them to work?</h2>
+
+<p>There are many options available and you may find it worth the investment to experiment a bit.   When I am on my computer, I use Google Reader.  It's easy to transition between e-mail and Google Reader, and the subscription process is pretty simple.  On my iPhone I use the basic, "Free RSS Reader."</p> 
+
+ <p>Now that we are armed with some options, naturally the next question is, "Now what do I do with it?"</p>
+
+<h2>How do you subscribe to feeds?</h2>
+
+<p>The first time I attempted to access an RSS feed, I have to admit, I got a bit frustrated.  I didn't really understand how it worked.  In my head, I was thinking it would involve just clicking on the button that looks like this:<img src= "/img/rss-icon.png" alt= "rss icon">   and magically the article would show up in my chosen reader.  Rather than the functionality working as I envisioned, what actually happens is you are taken to a page that look like this:</p>
+
+<a href="#general">Section 1: Practical Explanation (For Everyday Users)</a><br />
+<a href="#technical">Section 2: Setting up RSS for your Website (For Developers)</a>
+			]]></content:encoded>
+</item>
+
+
 <item>
 <title>GEW Tokyo</title>
 <category>Activities</category>
