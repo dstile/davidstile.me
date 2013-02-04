@@ -13,9 +13,9 @@
 <item>
 <title>Everything You Ever Cared to Know About RSS Feeds</title>
 <category>Learning</category>
-<link>http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds</link>
+<link>http://www.davidstile.me/index.php?get_post=Everything+You+Ever+Cared+to+Know+about+RSS+Feeds</link>
 <pubDate>Mon, 04 Feb 2013 08:00:10 -0800</pubDate>
-<guid isPermaLink="true">http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds</guid>
+<guid isPermaLink="true">http://www.davidstile.me/index.php?get_post=Everything+You+Ever+Cared+to+Know+about+RSS+Feeds</guid>
 <content:encoded><![CDATA[
 			<p><strong>RSS</strong> stands for Rich Site Summary.  Recently, the term has come up in the media more often with the passing of Aaron Swartz, one of the co-founders of RSS 1.0.  I began work on this article right before the news broke, and though I had not heard about him before it spurred me to do some research. He seemed to be a person genuinely passionate about making information accessible to everyone, a concept that I fully support.  Knowledge should be freely accessible so that any person has the opportunity to succeed if they possess the motivation.  RSS contributes to this objective by making it easier to get information.  In sum, RSS is a tool for easily subscribing to website updates.   It eliminates the inconvenience of needing to manually visit each website and parse old  versus new content.</p>
 
@@ -41,8 +41,8 @@
 
 <p>The first time I attempted to access an RSS feed, I have to admit, I got a bit frustrated.  I didn't really understand how it worked.  In my head, I was thinking it would involve just clicking on the button that looks like this:<img src= "/img/rss-icon.png" alt= "rss icon">   and magically the article would show up in my chosen reader.  Rather than the functionality working as I envisioned, what actually happens is you are taken to a page that look like this:</p>
 
-<a href="http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds#general">Section 1: Practical Explanation (For Everyday Users)</a><br />
-<a href="http://davidstile.me/nav.php?get_post=Everything+You+Ever+Care+to+Know+About+RSS+Feeds#technical">Section 2: Setting up RSS for your Website (For Developers)</a>
+<a href="http://www.davidstile.me/index.php?get_post=Everything+You+Ever+Cared+to+Know+about+RSS+Feeds#general">Section 1: Practical Explanation (For Everyday Users)</a><br />
+<a href="http://www.davidstile.me/index.php?get_post=Everything+You+Ever+Cared+to+Know+about+RSS+Feeds#technical">Section 2: Setting up RSS for your Website (For Developers)</a>
 			]]></content:encoded>
 </item>
 
