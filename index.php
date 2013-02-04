@@ -48,23 +48,6 @@ else {
                     <input type="hidden" name="category"/>
                     <input type="hidden" name="seesawoption" />
                 </form>
-                <section id='longstory'>
-                    <div class="row-fluid">
-
-                        <img id="timeframe" class="maxdim center" src="/img/timeframe.png" style="width: 100%;" usemap="#timeframemap" alt="Past/Present/Future Selections" />
-                        <map id="timeframemap" name="timeframemap">
-                            <area id="past" shape="RECT" coords="7,7,98,44" href="javascript:void(0);" title="Past Button" alt="timeframe option"/>
-                            <area id="present" shape="RECT" coords="109,7,259,44" href="javascript:void(0);" title="Present Button" alt="timeframe option"/>
-                            <area id="future" shape="RECT" coords="265,7,392,44" href="javascript:void(0);" title="Future Button" alt="timeframe option"/>
-                        </map> 
-
-                    </div>    
-                    <div id="wrapper" class="row-fluid hidden" alt="worklifebalmedia">
-                        <div class="center">
-                            <canvas data-processing-sources="seesaw_balanced.pde"></canvas>      
-                        </div>  
-                    </div>
-                </section>
                 <script type="text/javascript">
                 var $longstory=$('div #longstory');
                 $longstory.hide();

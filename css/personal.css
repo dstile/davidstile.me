@@ -23,6 +23,10 @@ body.nav {
     
 }
 
+figure img {
+    border: thin solid black;
+}
+
 div.comments {
     margin-left: auto;
     margin-right: auto;
