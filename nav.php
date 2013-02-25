@@ -180,7 +180,7 @@ category;
 
 	//template[0] is POST value for work/life
 
-	if(template[0] == 'life' || (template[0]=='work' && template[2]=='future')) {
+	if(template[0] == 'life' || (template[0]=='work' && template[2]=='Future')) {
 		
 		if(template[0] =='life'){
 			lifetemp.show();
@@ -235,7 +235,7 @@ category;
 		});
 	}
 	
-	if(template[0] =='work' && template[2]!=='future') {
+	if(template[0] =='work' && template[2]!=='Future') {
 		var header = 'Things I do to make a living';
 
 		if(lifetemp.not(":hidden")){

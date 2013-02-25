@@ -34,7 +34,7 @@ class Mysql {
         /* Preparing selection statement */
 
         $relprojects = array();
-        $query = "SELECT * FROM posts WHERE category='" . $category . "' AND time_classification='" . $time . "'AND seesawoption='" . $seesawoption . "'ORDER BY datesequence DESC";
+        $query = "SELECT * FROM posts WHERE category='" . $category . "' AND time_classification= '" . $time . "' AND seesawoption='" . $seesawoption . "'ORDER BY datesequence DESC";
 
         if ($result = $this->conn->query($query)) {
 
