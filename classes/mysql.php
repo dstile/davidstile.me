@@ -3,11 +3,12 @@
 //Define constants here
 
 $hostname = gethostname();    
-if ($hostname == 'Dstile-PC') {  
+
+if ($hostname == 'dstile-PC') {  
 define('DB_SERVER', "localhost");
-define('DB_USER', "root");
-define('DB_PASSWORD', "Flight1");
-define('DB_NAME', "SimpleMember");
+define('DB_USER', "dstile");
+define('DB_PASSWORD', "password");
+define('DB_NAME', "stilelog_sitecontent");
 }
 else {
 

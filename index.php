@@ -1,29 +1,37 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <?php include '_partials/header.php';
 
 require_once 'classes/contentgenerator.php';
 //Determines if the Most Recent Entries or a Specific Selection are shown
-if(isset($_GET['get_post']) && $_GET['get_post']!=='recent') {
+if(isset($_GET['get_post']) && $_GET['get_post']!='recent') {
     $template = 'individual';
     $post = urldecode($_GET['get_post']); 
 
 }
-elseif (isset($_GET['get_post']) && $_GET['get_post']==='recent') {
+elseif (isset($_GET['get_post']) && $_GET['get_post']=='recent') {
     $template = 'recent';
-      $post = urldecode($_GET['get_post']); 
+    $post = urldecode($_GET['get_post']); 
 }
 else {
-    $post = urldecode($_GET['get_post']); 
+    $post = 'recent'; 
     //If a single blog post has not been posted as a parameter then load most recent
     $template = 'default';
 }
 ?>
 
-<body>
+
 
 <!--Background source is set in Javascript based on day of week-->
 <img id="background" class="bg1" alt=""/>
 
-<div class="container-fluid">
+<div class="container-fluid row-fluid">
     <div id = 'corewrap'>
         <br />  
         <div class='row-fluid'>
@@ -89,34 +97,61 @@ else {
                 </div>
             </div>
         </div>
+
         <!--Bottom Tab dynamic content-->
-        <div class = 'row-fluid tabContent'>
-            <div class ='offset2 span10 row'>
-                <bottomTab class='center'>
-                    Latest Updates
-                </bottomTab>
-            
+
+        <div class ='offset2 span10'>
+            <bottomTab class='center'>
+                Latest Updates
+            </bottomTab>
+
             <div class = 'recentContainer'>               
                 <?php 
                 if ($template == 'default' || $template =='recent') {
-                include '_partials/recentposts.php'; 
-            } elseif ($template == 'individual') {
+                    include '_partials/recentposts.php'; 
+                } elseif ($template == 'individual') {
 
-                include '_partials/individualpost.php'; 
+                    include '_partials/individualpost.php'; 
 
-            }
+                }
 
                 ?>
-          </div>
-  
-            
-      
-    </div>
+            </div>
+
+
+
+        </div>
 
     </div>
+
+    <!-- Like pages fixed block-->
+    <div id = 'sideBar'>
+            <div class='quote'> Let me know your thoughts</div>
+            <div class = 'likeButton'><g:plusone class="likeButton"></g:plusone></div>
+            <div class = 'likeButton'>
+                <a href="https://twitter.com/David_Stile" class="twitter-follow-button" data-show-count="false">Follow @David_Stile</a>
+            </div>
+            <div class='likeButtonf'><div class="fb-like" data-href="http://www.davidstile.me" data-send="false" data-width="200" data-show-faces="true" data-font="arial"></div></div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+    window.___gcfg = {
+        lang: 'en-US'
+    };
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
     <!--PLaced at the end to improve load time -->
     <img id="background" class="bg2" alt="" src = "img/background1.png"/>
-    
+
 
 
     <?php include '_partials/footer.php' ?>
@@ -129,38 +164,40 @@ else {
     <script src="js/jquery.mCustomScrollbar.js"></script> 
     <script src="processing-1.4.1.js"></script>
 
-  
-<script>
+
+    <script>
 
 
-var timeclass;
-(function($){
+    var timeclass;
+    (function($){
 
 
             //Main Navigation page slider
 
             //save container that holds all information about recent posts
-            var tabHeight = $(window).height() - $('bottomTab').height(),
+            var bottomTab = $('bottomTab'), 
+            tabHeight = $(window).height() - bottomTab.height(),
             recentContainer = $('div.recent_container'),
-            bottomTab = $('bottomTab'),
             template = '<?php echo $template ?>';
             $('div#corewrap').css('height', tabHeight);
                       //I do this in hopes that it does not show while other images are loading
-  
 
-            if (template==="individual" || template==="recent") {
+
+                      if (template=="individual" || template=="recent") {
+
+                        $('body').addClass('bodyvis');
+                        $('#corewrap').hide();
               
-                $('body').addClass('bodyvis');
-                $('#corewrap').hide();
-                 $('img#background.bg1').toggleClass('bgopacity1');
-                $('img#background.bg2').toggleClass('bgopacity2');
-            }
+                        $('img#background.bg2').addClass('bgopacity2');
+                         $('#sideBar').show();
+                    }
 
             //if bottom tab is clicked => hide all current information, change the background
             //AND show most recent blog posts
-             bottomTab.on('click', function() {  
+            bottomTab.on('click', function() {  
                 $('body').toggleClass('bodyvis');
                 $('#corewrap').slideToggle(2000);
+                $('#sideBar').fadeToggle(2000);
                 $('img#background.bg1').toggleClass('bgopacity1',1000);
                 $('img#background.bg2').toggleClass('bgopacity2', 1000);
             });
@@ -242,12 +279,12 @@ var timeclass;
 
 
             $shortstoryButton.on('click', function(){
-             status_short += 1;
-             status_main +=1;
-             status_long=1;
-             $this= $(this);
-             $this.attr('src','/img/shortStory_clicked.png');
-             if(status_main>1){
+               status_short += 1;
+               status_main +=1;
+               status_long=1;
+               $this= $(this);
+               $this.attr('src','/img/shortStory_clicked.png');
+               if(status_main>1){
                 $longstoryButton.attr('src','/img/longStory.png');
             }else {
                 $longstoryButton.attr('src','/img/longStory.png');
@@ -261,7 +298,7 @@ var timeclass;
             });
         });
 
-           
+
 
             function worklife(){
                 if($("#wrapper").is(":hidden")) 

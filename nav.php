@@ -30,15 +30,6 @@ require_once 'classes/contentgenerator.php';
 		</div>     
 		<div class="span3"> 
 
-			<div class="row-fluid">
-				<img id="timeframe" class="maxdim" src="/img/timeframe.png" style="width: 100%;" usemap="#timeframemap" alt="Past/Present/Future Selections" />
-				<map id="timeframemap" name="timeframemap">
-					<area shape="RECT" coords="7,7,98,44" href="javascript:getmenuoptions(category, 'past', seesawoption)" title="Past Button" alt="timeframe option"/>
-					<area shape="RECT" coords="109,7,259,44" href="javascript:getmenuoptions(category, 'present', seesawoption)" title="Present Button" alt="timeframe option"/>
-					<area shape="RECT" coords="265,7,392,44" href="javascript:getmenuoptions(category, 'future', seesawoption)" title="Future Button" alt="timeframe option"/>
-				</map> 
-			</div>
-
 			<div class="row-fluid" id="wrapper"> 
 			</div>
 		</div> 
@@ -70,16 +61,28 @@ require_once 'classes/contentgenerator.php';
 	</div>
 
 
-	<div class="row-fluid">
-		<div id="project-content" class="hidden offset1 span10 transbackground contentNav rounded">	
 
-			
+
+
+	<div class = 'offset1 span11'>
+
+		<div id="project-content">	
+	
+		
 			<script id="header-template" type="text/x-handlebars-template">
 			<div class="sectionHeader">{{sectionHeader}}</div>
 			</script>
+
 			<!--Template used when Life is selected-->
 			<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rss' src= "img/rss.png"/></a>
+						<select id='timedrop'>
+							  <option>Past</option>
+							  <option>Present</option>
+							  <option>Future</option>
+							</select>
+						
 			<script id="lifepost-template" type="text/x-handlebars-template">
+
 			{{#each this}}
 			<container class= "newRow">
 			<posthead>{{posthead}}</posthead>
@@ -113,20 +116,16 @@ require_once 'classes/contentgenerator.php';
 			{{/each}}
 			</script>
 		</div>	
-	</div> 
+	</div>
+
 </div>
 <?php include '_partials/footer.php' ?>
-
-
-<!--mousewheel plugin -->
-<script src="js/jquery.mousewheel.min.js"></script>
-<!-- custom scrollbars plugin -->
-<script src="js/jquery.mCustomScrollbar.js"></script>
 <script src="js/DOMAssistantCompressed-2.8.1.js"></script>
 <script src="js/hoverlinks.js"></script>
 <script src="processing-1.4.1.js"></script> 
 <script src="js/handlebars-1.0.rc.1.js"></script> 
 <script src="js/postTemplates.js"></script>
+
 
 <!--Twitter API Library -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -138,10 +137,12 @@ category;
 
 (function($){
 	var projinfoArrayjs = new Array(),
-	contentHeight = 0.5*$(window).height();
+	contentHeight = 0.5*$(window).height(),
+	timedrop = $('#timedrop');
 	
 	$('.contentNav').css('height', contentHeight);
-	
+
+
 	<?php
 	$timeclassoption = $_GET['timeclassoption'];
 	$category = $_GET['category'];
@@ -158,6 +159,14 @@ category;
 	$congen->proj_content($timeclassoption, $category, $seesawoption);
 	?>
 
+     $('#timedrop').val(timeclass).attr('selected','selected');
+
+	timedrop.change(function() {
+		getmenuoptions(category,  $('#timedrop option:selected').text(), seesawoption);
+		
+	});
+
+
 	var template=[seesawoption,category,timeclass],
 	timeframe = $('#timeframe'),
 	lifetemp = $('#topicholder'),
@@ -165,7 +174,6 @@ category;
 	canvas = $('<canvas>');
 
 	lifetemp.hide();
-	timeframe.attr("src","/img/timeframe_"+timeclass+"2.png"); 
 	wrapper.empty();
 	canvas.attr('data-processing-sources','seesaw_'+seesawoption+'.pde');
 	wrapper.append(canvas);
@@ -199,7 +207,7 @@ category;
 				category: 'inspiration',
 				logo: '/img/Logo.png',
 				button: '/img/topiclogos-inspirations.png',
-				headerText: 'All the People/Projects/Things that are Interesting, Creative, Inspiring.'
+				headerText: 'All things Interesting, Creative, Inspiring'
 			}];
 		//This portion of code tweaks different areas of the website according to the category selected 
 		var logoImg = $('#Logo'),
@@ -251,47 +259,6 @@ category;
 		document.menuform.seesawoption.value = seesawoption;
 		document.menuform.submit();
 	};
-
-
-
-	//This is a plugin that pulls in the window with the scroll bar for content
-	$(".contentNav").mCustomScrollbar({
-		scrollButtons:{
-			enable:true
-		}
-	});
-
-	//This function scales the map coordinates (hot spots) with the image div
-	$(window).bind("load resize", function(){
-
-		var defcoords = ["7,7,98,44", "109,7,259,44", "265,7,392,44"], 
-		new_x1, new_x2, new_y1, new_y2;
-		var theImage = new Image();
-		var screenImage = $("#timeframe");
-		theImage.src = screenImage.attr("src");
-		var original_image_width=theImage.width,
-		original_image_height=theImage.height,
-		new_image_width = screenImage.width(),
-		new_image_height = screenImage.height(),
-		hotspots = $('#timeframemap area').length,
-		newcoords; 
-
-
-
-		for(var i=0;i<hotspots;i++) {
-
-			coords=defcoords[i].split(",");
-			new_x1 = (new_image_width/original_image_width)*coords[0];
-			new_y1 = (new_image_height/original_image_height)*coords[1];
-			new_x2 = (new_image_width/original_image_width)*coords[2];
-			new_y2 = (new_image_height/original_image_height)*coords[3];
-			newcoords = new_x1+","+new_y1+","+new_x2+","+new_y2;
-
-
-			$('#timeframemap area')[i].coords=newcoords;
-		}
-
-	});
 	
 })(jQuery);
 </script>
