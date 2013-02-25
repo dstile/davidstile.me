@@ -104,7 +104,7 @@ else {
         </div>
 
         <!--Bottom Tab dynamic content-->
-        <div class='row-fluid'>
+    
            <!-- Like pages fixed block-->
            <!--<div id ='sideBar'class= 'span2' >
             <img src="/img/footlogo.png">
@@ -116,7 +116,7 @@ else {
             <div class='likeButtonf'><div class="fb-like" data-href="http://www.davidstile.me" data-send="false" data-width="200" data-show-faces="true" data-font="arial"></div></div>
         </div>-->
 
-        <div class ='span10'>
+        <div class ='offset2 span10'>
             <div class = 'recentContainer'>               
                 <?php 
                 if ($template == 'default' || $template =='recent') {
@@ -129,7 +129,7 @@ else {
 
                 ?>
             </div>
-        </div>
+    
     </div>
 
 
@@ -195,6 +195,8 @@ var timeclass;
                         $('#sideBar').show();
                     }
 
+                    
+
             //if bottom tab is clicked => hide all current information, change the background
             //AND show most recent blog posts
             bottomTab.on('click', function() {  
@@ -217,17 +219,7 @@ var timeclass;
             }else{
                 background.attr('src', 'img/background.png');
             }
-             //Listen to each timeframe button for when they are clicked
-
-             $("#timeframemap area").each(function(i) {
-                var ind = i;     
-                $("map #"+timeoption[ind]).on('click', function(){
-                    timeclass=timeoption[ind];
-                    timeframe.attr("src","img/timeframe_"+timeclass+".png");
-                    worklife();
-                });
-            });
-
+          
 
              //This section manages the flow of what is shown vs. hidden on the main index
              var $longstoryButton = $('#long'),
