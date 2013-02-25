@@ -2,7 +2,7 @@
 	<div class='sectionHeader'>{{sectionHeader}}</div>
 
 </script>
-    <a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rssRecent' src= "img/rss.png"/></a>
+    <a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rssIndividual' src= "img/rss.png"/></a>
 <div id='content-stream' class = 'center'>
 <script id="individualpost-template" type="text/x-handlebars-template">
 		{{#each this}}

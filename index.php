@@ -97,14 +97,26 @@ else {
                 </div>
             </div>
         </div>
-
-        <!--Bottom Tab dynamic content-->
-
-        <div class ='offset2 span10'>
-            <bottomTab class='center'>
+<div class='offset2 span10'>
+          <bottomTab class='center'>
                 Latest Updates
             </bottomTab>
+        </div>
 
+        <!--Bottom Tab dynamic content-->
+        <div class='row-fluid'>
+           <!-- Like pages fixed block-->
+           <!--<div id ='sideBar'class= 'span2' >
+            <img src="/img/footlogo.png">
+            <div class='quote'><p> My place for sharing works and wisdom</p></div>
+            <div class = 'likeButton'><g:plusone class="likeButton"></g:plusone></div>
+            <div class = 'likeButton'>
+                <a href="https://twitter.com/David_Stile" class="twitter-follow-button" data-show-count="false">Follow @David_Stile</a>
+            </div>
+            <div class='likeButtonf'><div class="fb-like" data-href="http://www.davidstile.me" data-send="false" data-width="200" data-show-faces="true" data-font="arial"></div></div>
+        </div>-->
+
+        <div class ='span10'>
             <div class = 'recentContainer'>               
                 <?php 
                 if ($template == 'default' || $template =='recent') {
@@ -117,59 +129,50 @@ else {
 
                 ?>
             </div>
-
-
-
         </div>
-
-    </div>
-
-    <!-- Like pages fixed block-->
-    <div id = 'sideBar'>
-            <div class='quote'> Let me know your thoughts</div>
-            <div class = 'likeButton'><g:plusone class="likeButton"></g:plusone></div>
-            <div class = 'likeButton'>
-                <a href="https://twitter.com/David_Stile" class="twitter-follow-button" data-show-count="false">Follow @David_Stile</a>
-            </div>
-            <div class='likeButtonf'><div class="fb-like" data-href="http://www.davidstile.me" data-send="false" data-width="200" data-show-faces="true" data-font="arial"></div></div>
     </div>
 
 
-
-
-    <script type="text/javascript">
-    window.___gcfg = {
-        lang: 'en-US'
-    };
-    (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
-    </script>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-    <!--PLaced at the end to improve load time -->
-    <img id="background" class="bg2" alt="" src = "img/background1.png"/>
+</div>
 
 
 
-    <?php include '_partials/footer.php' ?>
-    <!--if javascript is not enabled default background loads-->
-
-    <noscript><img id="background" class="bg1" alt=""/></noscript> 
-    <!-- mousewheel plugin -->
-    <script src="js/jquery.mousewheel.min.js"></script>
-    <!-- custom scrollbars plugin -->
-    <script src="js/jquery.mCustomScrollbar.js"></script> 
-    <script src="processing-1.4.1.js"></script>
 
 
-    <script>
+
+<script type="text/javascript">
+window.___gcfg = {
+    lang: 'en-US'
+};
+(function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!--PLaced at the end to improve load time -->
+<img id="background" class="bg2" alt="" src = "img/background1.png"/>
 
 
-    var timeclass;
-    (function($){
+
+<?php include '_partials/footer.php' ?>
+<!--if javascript is not enabled default background loads-->
+
+<noscript><img id="background" class="bg1" alt=""/></noscript> 
+<!-- mousewheel plugin -->
+<script src="js/jquery.mousewheel.min.js"></script>
+<!-- custom scrollbars plugin -->
+<script src="js/jquery.mCustomScrollbar.js"></script> 
+<script src="processing-1.4.1.js"></script>
+
+
+<script>
+
+
+var timeclass;
+(function($){
 
 
             //Main Navigation page slider
@@ -187,9 +190,9 @@ else {
 
                         $('body').addClass('bodyvis');
                         $('#corewrap').hide();
-              
+
                         $('img#background.bg2').addClass('bgopacity2');
-                         $('#sideBar').show();
+                        $('#sideBar').show();
                     }
 
             //if bottom tab is clicked => hide all current information, change the background
