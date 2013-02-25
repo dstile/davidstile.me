@@ -86,7 +86,9 @@ require_once 'classes/contentgenerator.php';
 			{{#each this}}
 			<container class= "newRow">
 			<posthead>{{posthead}}</posthead>
-			<datesequence>{{{datesequence}}}</datesequence>
+			<datesequence><span style="color:black">Published: </span><i>{{{datesequence}}}</i></datesequence>
+			<br />
+			<br />
 			{{#if picture}}<picture>{{{picture}}}</picture>{{/if}}
 			<description>{{{description}}}</description>
 			{{#if media}}<media>{{{media}}}</media>{{/if}}
