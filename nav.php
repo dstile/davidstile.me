@@ -63,7 +63,7 @@ require_once 'classes/contentgenerator.php';
 
 
 
-
+<div class='row-fluid'>
 	<div class = 'offset1 span11'>
 
 		<div id="project-content">	
@@ -119,6 +119,7 @@ require_once 'classes/contentgenerator.php';
 			</script>
 		</div>	
 	</div>
+</div>
 
 </div>
 <?php include '_partials/footer.php' ?>
