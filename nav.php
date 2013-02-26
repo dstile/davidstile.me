@@ -64,8 +64,9 @@ require_once 'classes/contentgenerator.php';
 
 
 <div class='row-fluid'>
-	<div class = 'offset1 span11'>
-
+	
+	
+	<div class='offset1 span10'>
 		<div id="project-content">	
 	
 		
