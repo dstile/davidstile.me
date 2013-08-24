@@ -49,7 +49,7 @@ else {
 
 
                 <img id='short' title="Short Story Button" class='center inline-block' src='/img/shortStory.png'/>
-                <a href = "http://davidstile.me/nav.php?timeclassoption=present&seesawoption=life&category=technology"><img id='long' title="Long Story Button" class='center inline-block' src='/img/longStory.png'/></a>
+                <a href = "http://davidstile.com/nav.php?timeclassoption=present&seesawoption=life&category=technology"><img id='long' title="Long Story Button" class='center inline-block' src='/img/longStory.png'/></a>
 
                 <form name="menuform" method="get" action="nav.php">    
                     <input type="hidden" name="timeclassoption"/>
@@ -113,7 +113,7 @@ else {
             <div class = 'likeButton'>
                 <a href="https://twitter.com/David_Stile" class="twitter-follow-button" data-show-count="false">Follow @David_Stile</a>
             </div>
-            <div class='likeButtonf'><div class="fb-like" data-href="http://www.davidstile.me" data-send="false" data-width="200" data-show-faces="true" data-font="arial"></div></div>
+            <div class='likeButtonf'><div class="fb-like" data-href="http://www.davidstile.com" data-send="false" data-width="200" data-show-faces="true" data-font="arial"></div></div>
         </div>-->
 
         <div class ='offset2 span10'>
