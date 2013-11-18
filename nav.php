@@ -75,12 +75,12 @@ require_once 'classes/contentgenerator.php';
 			</script>
 
 			<!--Template used when Life is selected-->
-			<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rss' src= "img/rss.png"/></a>
+			<!--<a type="application/rss+xml" href="http://feeds.feedburner.com/DavidStile"><img class='rss' src= "img/rss.png"/></a>
 						<select id='timedrop'>
 							  <option>Past</option>
 							  <option>Present</option>
 							  <option>Future</option>
-							</select>
+							</select>-->
 						
 			<script id="lifepost-template" type="text/x-handlebars-template">
 
